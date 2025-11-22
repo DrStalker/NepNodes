@@ -19,13 +19,15 @@ NODE_CLASS_MAPPINGS = {
     "NepXOR_INT_INT": NepXOR_INT_INT,
     "NepRemoveFirstOrLastImageFromBatch": NepRemoveFirstOrLastImageFromBatch,
     "NepRatioResolution": NepRatioResolution,
+    "Math_Multiply_INT_INT": Math_Multiply_INT_INT,
 }
 
 NODE_DISPLAY_NAME_MAPPINGS = { 
     "NepWan_Resolutions": "WAN Resolutions (Nep)" ,
     "NepXOR_INT_INT": "XOR (Nep)",
     "NepRemoveFirstOrLastImageFromBatch": "Remove First or Last From Batch (Nep)",
-    "NepRatioResolution": "Reolution from Ratio (Nep)"
+    "NepRatioResolution": "Resolution from Ratio (Nep)",
+    "Math_Multiply_INT_INT": "XOR But Not (Nep)"
     
 }
 

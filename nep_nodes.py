@@ -23,7 +23,7 @@ import math
 
 #---------------------------------------------------------------------------------------------------------------------------------------------------#
 
-#Based on JPS SDXL resolution
+# Based on JPS SDXL resolution
 
 class NepWan_Resolutions:
     resolution = ["480p square - 640x640","480p landscape - 848x480", "480p portrait - 480x848", "480p 4:3 landscape - 640x480","480p 4:3 portrait - 480x640"]
@@ -137,15 +137,42 @@ class NepXOR_INT_INT:
                 "int_b": ("INT", {"default": 1,}),
             }
         }
-    RETURN_TYPES = ("INT")
-    RETURN_NAMES = ("xor")
+    RETURN_TYPES = ("INT","INT")
+    RETURN_NAMES = ("xor","foo")
     FUNCTION = "get_xor_int_int"
     CATEGORY="NepNodes"
 
     def get_xor_int_int(self,int_a,int_b):
         xor = int(int_a) ^ int(int_b)        
+        #return(int(xor))
+        return int(1)
 
-        return(int(xor))
+class Math_Multiply_INT_INT:
+
+    def init(self):
+        pass
+
+    @classmethod
+    def INPUT_TYPES(cls):
+        return {
+            "required": {
+                "int_a": ("INT", {"default": 1,}),
+                "int_b": ("INT", {"default": 1,}),
+            }
+        }
+
+    RETURN_TYPES = ("INT","FLOAT")
+    RETURN_NAMES = ("int_multiply","float_multiply")
+    FUNCTION = "get_multiply_int_int"
+
+    CATEGORY="JPS Nodes/Math"
+
+    def get_multiply_int_int(self,int_a,int_b):
+        int_multiply = int(int_a) * int(int_b)
+        float_multiply = int(int_a) * int(int_b)
+
+        return(int(int_multiply),float(float_multiply))
+
 
 #---------------------------------------------------------------------------------------------------------------------------------------------------#
 
