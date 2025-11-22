@@ -9,8 +9,9 @@
 import torch
 import json
 import os
-import comfy.sd
-import folder_paths
+import comfy.sd # type: ignore
+import folder_paths # type: ignore
+import math
 #from datetime import datetime
 #from PIL import Image, ImageOps, ImageSequence
 #import numpy as np
@@ -64,6 +65,58 @@ class NepWan_Resolutions:
             width = 480
             height = 640
         return(int(width),int(height))
+#---------------------------------------------------------------------------------------------------------------------------------------------------#
+
+
+class NepRatioResolution:
+    ratio = ["1:1", "4:3", "3:2", "16:9","16:10","21:9"]
+    orientation = ["portrait", "landscape"]
+    def __init__(self):
+        pass
+
+    @classmethod
+    def INPUT_TYPES(s):
+        return {
+            "required": {
+                "ratio": (s.ratio,),
+                "orientation": (s.orientation,),
+                "megapixels": ("FLOAT", {"default": 1,"min":0.01,"max":100}),
+            }
+        }
+    RETURN_TYPES = ("INT","INT",)
+    RETURN_NAMES = ("width", "height")
+    FUNCTION = "get_resolutions_from_ratio"
+
+    CATEGORY="NepNodes"
+    def get_resolutions_from_ratio(self,ratio,megapixels,orientation):
+
+        rationum = float(1)
+        if(ratio == "4:3"): 
+            rationum = float(4/3)
+        if(ratio == "3:2"): 
+            rationum = float(3/2)
+        if(ratio == "16:9"): 
+            rationum = float(16/9)
+        if(ratio == "16:10"): 
+            rationum = float(16/10)
+        if(ratio == "21:9"): 
+            rationum = float(21/9)
+
+
+        total_pixels = megapixels * 1024*1024
+        width = math.sqrt(total_pixels * rationum)
+        height = width / rationum
+        width = int(width)
+        height = int(height)
+
+        if orientation  == "portrait":
+            if width > height:
+                width, height = height, width
+        else:
+            if height > width:
+                width, height = height, width
+
+        return(width, height)
 
 #---------------------------------------------------------------------------------------------------------------------------------------------------#
 
@@ -81,11 +134,9 @@ class NepXOR_INT_INT:
                 "int_b": ("INT", {"default": 1,}),
             }
         }
-
     RETURN_TYPES = ("INT")
     RETURN_NAMES = ("xor")
     FUNCTION = "get_xor_int_int"
-
     CATEGORY="NepNodes"
 
     def get_xor_int_int(self,int_a,int_b):
@@ -106,7 +157,7 @@ class NepRemoveFirstOrLastImageFromBatch:
         return {
             "required": {
                 "image_batch": ("IMAGE", {}),
-                "mode": (["first", "last"], {"default": "first"}),
+                "mode": (["first", "last", "none"], {"default": "first"}),
             }
         }
 
@@ -124,5 +175,7 @@ class NepRemoveFirstOrLastImageFromBatch:
             return (image_batch,)
         if mode == "first":
             return (image_batch[1:],)
+        if mode == "last":
+            return (image_batch[:-1],)        
         else:
-            return (image_batch[:-1],)
+            return (image_batch,)
