@@ -14,7 +14,7 @@ Outputs some pre-configured resolutions I use in WAN
 
 XOR two integers. 
 
-## Remove First or Last From Batch (Nep)"
+## Remove First or Last From Batch (Nep)
 
 Removes teh first or last image from a batch of images. Useful for WAN where the first image is not part of the video (e.g.: start a prompt with "Immediately cut to a new scene where teh exact same person...")
 

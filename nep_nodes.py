@@ -89,6 +89,7 @@ class NepRatioResolution:
 
     CATEGORY="NepNodes"
     def get_resolutions_from_ratio(self,ratio,megapixels,orientation):
+        #print("ratio:",ratio,"megapixels:",megapixels,"orientation:",orientation)
 
         rationum = float(1)
         if(ratio == "4:3"): 
@@ -118,7 +119,7 @@ class NepRatioResolution:
         else:
             if height > width:
                 width, height = height, width
-
+        #print("width:", width, "height:",height,)
         return(width, height)
 
 #---------------------------------------------------------------------------------------------------------------------------------------------------#
@@ -133,8 +134,8 @@ class NepXOR_INT_INT:
     def INPUT_TYPES(cls):
         return {
             "required": {
-                "int_a": ("INT", {"default": 1,}),
-                "int_b": ("INT", {"default": 1,}),
+                "int_a": ("INT", {"default": 1,"min":0,"max":1000000000000000}),
+                "int_b": ("INT", {"default": 1,"min":0,"max":1000000000000000}),
             }
         }
     RETURN_TYPES = ("INT",)
