@@ -103,11 +103,14 @@ class NepRatioResolution:
             rationum = float(21/9)
 
 
-        total_pixels = megapixels * 1024*1024
+        total_pixels = megapixels * 1024 * 1024
         width = math.sqrt(total_pixels * rationum)
         height = width / rationum
-        width = int(width)
-        height = int(height)
+
+        def round4(x):
+            return int(round(x / 4) * 4)        
+        width = round4(width)    # I think resultions have to be a multiple of 4?
+        height = round4(height)  # Or maybe I'm just making that up.  Whatever, it was easy to add.
 
         if orientation  == "portrait":
             if width > height:
