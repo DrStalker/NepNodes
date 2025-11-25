@@ -19,6 +19,8 @@ NODE_CLASS_MAPPINGS = {
     "NepXOR_INT_INT": NepXOR_INT_INT,
     "NepRemoveFirstOrLastImageFromBatch": NepRemoveFirstOrLastImageFromBatch,
     "NepRatioResolution": NepRatioResolution,
+    "NepLastImageFromBatch": NepLastImageFromBatch,
+    "NepFirstImageFromBatch": NepFirstImageFromBatch,
 
 }
 
@@ -27,7 +29,8 @@ NODE_DISPLAY_NAME_MAPPINGS = {
     "NepXOR_INT_INT": "XOR (Nep)",
     "NepRemoveFirstOrLastImageFromBatch": "Remove First or Last From Batch (Nep)",
     "NepRatioResolution": "Resolution from Ratio (Nep)",
-    
+    "NepLastImageFromBatch": "Get Last Image (Nep)",
+    "NepFirstImageFromBatch": "Get First Image (Nep)"
 }
 
 __all__ = ['NODE_CLASS_MAPPINGS', 'NODE_DISPLAY_NAME_MAPPINGS']

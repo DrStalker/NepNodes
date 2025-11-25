@@ -162,7 +162,7 @@ class NepRemoveFirstOrLastImageFromBatch:
         return {
             "required": {
                 "image_batch": ("IMAGE", {}),
-                "mode": (["first", "last", "none"], {"default": "first"}),
+                "mode": (["first", "last", "none"], {"default": "none"}),
             }
         }
 
@@ -171,7 +171,7 @@ class NepRemoveFirstOrLastImageFromBatch:
     FUNCTION = "remove"
     CATEGORY="NepNodes"
 
-    def remove(self, image_batch, mode="first"):
+    def remove(self, image_batch, mode="none"):
         import torch
         if image_batch.dim() == 3:
             # 只有一张，删除后为空batch
@@ -184,3 +184,39 @@ class NepRemoveFirstOrLastImageFromBatch:
             return (image_batch[:-1],)        
         else:
             return (image_batch,)
+
+class NepLastImageFromBatch:
+
+    @classmethod
+    def INPUT_TYPES(cls):
+        return {
+            "required": {
+                "image_batch": ("IMAGE", {}),
+            }
+        }
+
+    RETURN_TYPES = ("IMAGE",)
+    RETURN_NAMES = ("image",)
+    FUNCTION = "getlastimage"
+    CATEGORY="NepNodes"
+
+    def getlastimage(self, image_batch, mode="none"):
+        return (image_batch[-1],)        
+
+class NepFirstImageFromBatch:
+
+    @classmethod
+    def INPUT_TYPES(cls):
+        return {
+            "required": {
+                "image_batch": ("IMAGE", {}),
+            }
+        }
+
+    RETURN_TYPES = ("IMAGE",)
+    RETURN_NAMES = ("image",)
+    FUNCTION = "getfirstimage"
+    CATEGORY="NepNodes"
+
+    def getfirstimage(self, image_batch, mode="none"):
+        return (image_batch[1],)        
