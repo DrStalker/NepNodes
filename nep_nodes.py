@@ -185,38 +185,3 @@ class NepRemoveFirstOrLastImageFromBatch:
         else:
             return (image_batch,)
 
-class NepLastImageFromBatch:
-
-    @classmethod
-    def INPUT_TYPES(cls):
-        return {
-            "required": {
-                "image_batch": ("IMAGE", {}),
-            }
-        }
-
-    RETURN_TYPES = ("IMAGE",)
-    RETURN_NAMES = ("image",)
-    FUNCTION = "getlastimage"
-    CATEGORY="NepNodes"
-
-    def getlastimage(self, image_batch, mode="none"):
-        return (image_batch[-1],)        
-
-class NepFirstImageFromBatch:
-
-    @classmethod
-    def INPUT_TYPES(cls):
-        return {
-            "required": {
-                "image_batch": ("IMAGE", {}),
-            }
-        }
-
-    RETURN_TYPES = ("IMAGE",)
-    RETURN_NAMES = ("image",)
-    FUNCTION = "getfirstimage"
-    CATEGORY="NepNodes"
-
-    def getfirstimage(self, image_batch, mode="none"):
-        return (image_batch[1],)        
