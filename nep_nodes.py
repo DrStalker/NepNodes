@@ -21,7 +21,7 @@ import math
 #import time
 #import random
 #import traceback
-
+import re
 
 
 
@@ -29,7 +29,7 @@ import math
 
 # Based on JPS SDXL resolution
 
-class NepWan_Resolutions:
+class NepWanResolutions:
     resolution = ["480p square - 640x640","480p landscape - 848x480", "480p portrait - 480x848", "480p 4:3 landscape - 640x480","480p 4:3 portrait - 480x640"]
     
     def __init__(self):
@@ -173,7 +173,7 @@ class NepRemoveFirstOrLastImageFromBatch:
     RETURN_TYPES = ("IMAGE",)
     RETURN_NAMES = ("image_batch",)
     FUNCTION = "remove"
-    CATEGORY="NepNodes"
+    CATEGORY = "NepNodes"
 
     def remove(self, image_batch, mode="none"):
         import torch
@@ -191,10 +191,44 @@ class NepRemoveFirstOrLastImageFromBatch:
 #---------------------------------------------------------------------------------------------------------------------------------------------------#
 
 
-#---------------------------------------------------------------------------------------------------------------------------------------------------
+class NepSafeString:
+    #"""
+    #Makes a string safe for use in filenames
+    #""""
+
+    @classmethod
+    def INPUT_TYPES(cls):
+        return {
+            "required": {
+                "text": ("STRING", {"multiline": True, "default": ""}),
+            }
+        }
+
+    RETURN_TYPES = ("STRING",)
+    RETURN_NAMES = ("clean_text",)
+    FUNCTION = "maketextsafe"
+    CATEGORY = "NepNodes"
+
+    # Windows illegal filename characters:
+    # https://learn.microsoft.com/en-us/windows/win32/fileio/naming-a-file
+    INVALID_CHARS = r'[\\/:*?"<>|\n\r\t]'
+
+    def maketextsafe(self, text):
+        if len(text) > 100:  #Max 100 characters
+            text = text[:100]
+        cleaned = re.sub(self.INVALID_CHARS, "", text)
+        cleaned = cleaned.strip()
+        return (cleaned,)
+
+
+
 
 #---------------------------------------------------------------------------------------------------------------------------------------------------
-
+#class NepPipeIn 
+ 
+#---------------------------------------------------------------------------------------------------------------------------------------------------
+#class NepPipeOut
+ 
 #---------------------------------------------------------------------------------------------------------------------------------------------------
 
 #---------------------------------------------------------------------------------------------------------------------------------------------------
@@ -208,8 +242,17 @@ class NepRemoveFirstOrLastImageFromBatch:
 
 
 NODE_CLASS_MAPPINGS = {
-    "XOR (Nep)": NepXOR_INT_INT,
+    "NepXOR_INT_INT": NepXOR_INT_INT,
     "Remove First or Last From Batch (NEP)": NepRemoveFirstOrLastImageFromBatch,
     "Resolution from Ratio (NEP)": NepRatioResolution,
-    "WAN Resolutions (NEP)": NepWan_Resolutions, 
+    "NepWanResolutions": NepWanResolutions, 
+    "NepSafeString": NepSafeString,
+}
+
+NODE_DISPLAY_NAME_MAPPINGS = {
+    "NepXOR_INT_INT": "XOR (Nep)",
+    "NepRemoveFirstOrLastImageFromBatch": "Remove First or Last From Batch (NEP)",
+    "NepRatioResolution": "Resolution from Ratio (NEP)",
+    "NepWanResolutions": "WAN Resolutions (NEP)",
+    "NepSafeString": "Safe String (NEP)",
 }
