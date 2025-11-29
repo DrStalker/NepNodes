@@ -209,8 +209,6 @@ class NepSafeString:
     FUNCTION = "maketextsafe"
     CATEGORY = "NepNodes"
 
-    # Windows illegal filename characters:
-    # https://learn.microsoft.com/en-us/windows/win32/fileio/naming-a-file
     INVALID_CHARS = r'[\\/:*?"<>|\n\r\t]'
 
     def maketextsafe(self, text):
