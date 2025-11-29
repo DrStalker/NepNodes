@@ -22,6 +22,7 @@ import math
 #import random
 #import traceback
 import re
+import comfy.samplers, comfy.supported_models
 
 
 
