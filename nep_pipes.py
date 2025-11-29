@@ -1,24 +1,10 @@
-import torch
-import json
-import os
-import comfy.sd # type: ignore
-import folder_paths # type: ignore
-import math
-#from datetime import datetime
-#from PIL import Image, ImageOps, ImageSequence
-#import numpy as np
-#from PIL.PngImagePlugin import PngInfo
-#from comfy.cli_args import args
-#import torch.nn.functional as F
-#import time
-#import random
-#import traceback
+
 import re
 import comfy.samplers, comfy.supported_models
 
 
 
-# Taken from EasyUSe and modified.
+# Taken from EasyUse and modified.
 
 class NepPipeIn:
     def __init__(self):
@@ -29,76 +15,56 @@ class NepPipeIn:
         return {
              "required": {},
              "optional": {
-                "pipe": ("PIPE_LINE",),
+                "pipe": ("NEPPIPELINE",),
                 "model": ("MODEL",),
-                "pos": ("CONDITIONING",),
-                "neg": ("CONDITIONING",),
-                "latent": ("LATENT",),
-                "vae": ("VAE",),
+                "modelname": ("STRING",),
                 "clip": ("CLIP",),
-                "image": ("IMAGE",),
-                "xyPlot": ("XYPLOT",),
+                "vae": ("VAE",),
+                "steps": ("INT",),
+                "cfg": ("FLOAT",),
+                "sampler": ("STRING",),
+                "samplername": ("STRING",),
+                "scheduler": ("STRING",),
+                "schedulername": ("STRING",),
             },
             "hidden": {"my_unique_id": "UNIQUE_ID"},
         }
 
-    RETURN_TYPES = ("PIPE_LINE",)
+    RETURN_TYPES = ("NEPPIPELINE",)
     RETURN_NAMES = ("pipe",)
     FUNCTION = "flush"
 
     CATEGORY = "EasyUse/Pipe"
 
-    def flush(self, pipe=None, model=None, pos=None, neg=None, latent=None, vae=None, clip=None, image=None, xyplot=None, my_unique_id=None):
+    def flush(self, pipe=None, model=None, modelname=None, clip=None, vae=None, steps=None, cfg=None, sampler=None, samplername=None, scheduler=None, schedulername=None,  my_unique_id=None):
 
         model = model if model is not None else pipe.get("model")
-        if model is None:
-            log_node_warn(f'pipeIn[{my_unique_id}]', "Model missing from pipeLine")
-        pos = pos if pos is not None else pipe.get("positive")
-        if pos is None:
-            log_node_warn(f'pipeIn[{my_unique_id}]', "Pos Conditioning missing from pipeLine")
-        neg = neg if neg is not None else pipe.get("negative")
-        if neg is None:
-            log_node_warn(f'pipeIn[{my_unique_id}]', "Neg Conditioning missing from pipeLine")
+        modelname = modelname if modelname is not None else pipe.get("modelname")
+        clip = clip if clip is not None else pipe.get("clip")
         vae = vae if vae is not None else pipe.get("vae")
-        if vae is None:
-            log_node_warn(f'pipeIn[{my_unique_id}]', "VAE missing from pipeLine")
-        clip = clip if clip is not None else pipe.get("clip") if pipe is not None and "clip" in pipe else None
-        # if clip is None:
-        #     log_node_warn(f'pipeIn[{my_unique_id}]', "Clip missing from pipeLine")
-        if latent is not None:
-            samples = latent
-        elif image is None:
-            samples = pipe.get("samples") if pipe is not None else None
-            image = pipe.get("images") if pipe is not None else None
-        elif image is not None:
-            if pipe is None:
-                batch_size = 1
-            else:
-                batch_size = pipe["loader_settings"]["batch_size"] if "batch_size" in pipe["loader_settings"] else 1
-            samples = {"samples": vae.encode(image[:, :, :, :3])}
-            samples = RepeatLatentBatch().repeat(samples, batch_size)[0]
+        steps = steps if steps is not None else pipe.get("steps")
+        cfg = cfg if cfg is not None else pipe.get("cfg")
+        sampler = sampler if sampler is not None else pipe.get("sampler")
+        samplername = samplername if samplername is not None else pipe.get("samplername")
+        scheduler = scheduler if scheduler is not None else pipe.get("scheduler")
+        schedulername = schedulername if schedulername is not None else pipe.get("schedulername")
 
         if pipe is None:
             pipe = {"loader_settings": {"positive": "", "negative": "", "xyplot": None}}
 
-        xyplot = xyplot if xyplot is not None else pipe['loader_settings']['xyplot'] if xyplot in pipe['loader_settings'] else None
 
         new_pipe = {
             **pipe,
-            "model": model,
-            "positive": pos,
-            "negative": neg,
-            "vae": vae,
-            "clip": clip,
-
-            "samples": samples,
-            "images": image,
-            "seed": pipe.get('seed') if pipe is not None and "seed" in pipe else None,
-
-            "loader_settings": {
-                **pipe["loader_settings"],
-                "xyplot": xyplot
-            }
+            "model":         model,         
+            "modelname":     modelname,     
+            "clip":          clip,          
+            "vae":           vae,           
+            "step":          steps,         
+            "cfg":           cfg,           
+            "sampler":       sampler,       
+            "samplername":   samplername,   
+            "scheduler":     scheduler,     
+            "schedulername": schedulername,       
         }
         del pipe
 
@@ -118,21 +84,23 @@ class NepPipeOut:
             "hidden": {"my_unique_id": "UNIQUE_ID"},
         }
 
-    RETURN_TYPES = ("PIPE_LINE", "MODEL", "CONDITIONING", "CONDITIONING", "LATENT", "VAE", "CLIP", "IMAGE", "INT",)
-    RETURN_NAMES = ("pipe", "model", "pos", "neg", "latent", "vae", "clip", "image", "seed",)
+    RETURN_TYPES = ("NEPPIPELINE", "MODEL", "STRING", "CLIP", "VAE", "INT", "FLOAT", "STRING", "STRING", "STRING", "STRING",)
+    RETURN_NAMES = ("pipe", "model", "modelname", "clip", "vae", "steps", "cfg", "sampler","samplername","scheduler","schedulername",)
     FUNCTION = "flush"
 
     CATEGORY = "EasyUse/Pipe"
 
     def flush(self, pipe, my_unique_id=None):
-        model = pipe.get("model")
-        pos = pipe.get("positive")
-        neg = pipe.get("negative")
-        latent = pipe.get("samples")
-        vae = pipe.get("vae")
-        clip = pipe.get("clip")
-        image = pipe.get("images")
-        seed = pipe.get("seed")
+        model         = pipe.get("model")
+        modelname     = pipe.get("modelname")
+        clip          = pipe.get("clip")
+        vae           = pipe.get("vae")
+        steps         = pipe.get("steps")
+        cfg           = pipe.get("cfg")
+        sampler       = pipe.get("sampler")
+        samplername   = pipe.get("samplername")
+        scheduler     = pipe.get("scheduler")
+        schedulername = pipe.get("schedulername")
 
         return pipe, model, pos, neg, latent, vae, clip, image, seed
 
