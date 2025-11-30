@@ -113,7 +113,7 @@ class NepRatioResolution:
         width = math.sqrt(total_pixels * rationum)
         height = width / rationum
         def round16(x):
-            return int(round(x / 16) * 164)  
+            return int(round(x / 16) * 16)  
         def round4(x):
             return int(round(x / 4) * 4)        
         width = round16(width)    # Z-Image likes multiples of 16, I think.
