@@ -38,6 +38,9 @@ class NepPipeIn:
 
     def flush(self, pipe=None, model=None, modelname=None, clip=None, vae=None, steps=None, cfg=None, sampler=None, samplername=None, scheduler=None, schedulername=None,  my_unique_id=None):
 
+        if pipe is None:
+            pipe = {"loader_settings": {"positive": "", "negative": "", "xyplot": None}}
+
         model = model if model is not None else pipe.get("model")
         modelname = modelname if modelname is not None else pipe.get("modelname")
         clip = clip if clip is not None else pipe.get("clip")
@@ -49,8 +52,7 @@ class NepPipeIn:
         scheduler = scheduler if scheduler is not None else pipe.get("scheduler")
         schedulername = schedulername if schedulername is not None else pipe.get("schedulername")
 
-        if pipe is None:
-            pipe = {"loader_settings": {"positive": "", "negative": "", "xyplot": None}}
+
 
 
         new_pipe = {
@@ -59,7 +61,7 @@ class NepPipeIn:
             "modelname":     modelname,     
             "clip":          clip,          
             "vae":           vae,           
-            "step":          steps,         
+            "steps":          steps,         
             "cfg":           cfg,           
             "sampler":       sampler,       
             "samplername":   samplername,   
@@ -70,6 +72,8 @@ class NepPipeIn:
 
         return (new_pipe,)
 
+#---------------------------------------------------------------------------------------------------------------------------------------------------
+
 # 节点束输出
 class NepPipeOut:
     def __init__(self):
@@ -79,7 +83,7 @@ class NepPipeOut:
     def INPUT_TYPES(s):
         return {
              "required": {
-                "pipe": ("PIPE_LINE",),
+                "pipe": ("NEPPIPELINE",),
             },
             "hidden": {"my_unique_id": "UNIQUE_ID"},
         }
@@ -102,7 +106,7 @@ class NepPipeOut:
         scheduler     = pipe.get("scheduler")
         schedulername = pipe.get("schedulername")
 
-        return pipe, model, pos, neg, latent, vae, clip, image, seed
+        return (pipe, model, modelname, clip, vae, steps, cfg, sampler, samplername, scheduler, schedulername,)
 
 #---------------------------------------------------------------------------------------------------------------------------------------------------
 
