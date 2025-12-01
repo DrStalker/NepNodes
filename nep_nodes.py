@@ -74,7 +74,7 @@ class NepWanResolutions:
 
 
 class NepRatioResolution:
-    ratio = ["1:1", "4:3", "3:2", "16:9","16:10","21:9"]
+    ratio = ["1:1", "5:4", "4:3", "3:2", "16:10","16:9","2:1","21:9"]
     orientation = ["portrait", "landscape"]
     def __init__(self):
         pass
@@ -88,26 +88,29 @@ class NepRatioResolution:
                 "megapixels": ("FLOAT", {"default": 1,"min":0.01,"max":100}),
             }
         }
-    RETURN_TYPES = ("INT","INT",)
-    RETURN_NAMES = ("width", "height")
+    RETURN_TYPES = ("INT","INT","FLOAT")
+    RETURN_NAMES = ("width", "height", "ratio")
     FUNCTION = "get_resolutions_from_ratio"
 
     CATEGORY="NepNodes"
     def get_resolutions_from_ratio(self,ratio,megapixels,orientation):
         #print("ratio:",ratio,"megapixels:",megapixels,"orientation:",orientation)
 
-        rationum = float(1)
-        if(ratio == "4:3"): 
+        rationum = float(1) # fallback to 1 if things break weirdly
+        if(ratio == "5:4"): 
+            rationum = float(5/4)        
+        elif(ratio == "4:3"): 
             rationum = float(4/3)
-        if(ratio == "3:2"): 
+        elif(ratio == "3:2"): 
             rationum = float(3/2)
-        if(ratio == "16:9"): 
+        elif(ratio == "16:9"): 
             rationum = float(16/9)
-        if(ratio == "16:10"): 
+        elif(ratio == "16:10"): 
             rationum = float(16/10)
-        if(ratio == "21:9"): 
+        elif(ratio == "2:1"): 
+            rationum = float(2)
+        elif(ratio == "21:9"): 
             rationum = float(21/9)
-
 
         total_pixels = megapixels * 1024 * 1024
         width = math.sqrt(total_pixels * rationum)
@@ -126,7 +129,7 @@ class NepRatioResolution:
             if height > width:
                 width, height = height, width
         #print("width:", width, "height:",height,)
-        return(width, height)
+        return(width, height, rationum)
 
 #---------------------------------------------------------------------------------------------------------------------------------------------------#
 
