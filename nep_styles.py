@@ -115,8 +115,8 @@ class NepStyles:
                 "prompt": ("STRING", {"default": "", "multiline": True}),                
             }
         }
-    RETURN_TYPES = ("STRING","STRING","STRING",)
-    RETURN_NAMES = ("prompt","prefix","suffix")
+    RETURN_TYPES = ("STRING","STRING","STRING","STRING",)
+    RETURN_NAMES = ("prompt","prefix","suffix","stylename",)
     FUNCTION = "addStyle"
     CATEGORY="NepNodes"
     OUTPUT_TOOLTIPS = ("The styled prompt","the style's prefix","the styles suffix")
@@ -124,9 +124,10 @@ class NepStyles:
     def addStyle(self,style,prompt):
         prefix = self.STYLE_PRESETS[style]["prefix"]  
         suffix = self.STYLE_PRESETS[style]["suffix"] 
+        stylename = style
         base = prompt.strip() if prompt else ""
         result = f"{prefix}\n{base}\n{suffix}"
-        return (result,prefix,suffix)
+        return (result,prefix,suffix,stylename)
         
 
 #---------------------------------------------------------------------------------------------------------------------------------------------------#
