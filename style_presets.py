@@ -119,28 +119,31 @@ STYLE_PRESETS = {
             "suffix": "octane render, highly detailed, volumetric, dramatic lighting"},
         "Cyberpunk": {
             "prefix": "neon-drenched cyberpunk future, dense holograms, rain-soaked streets, sleek urban tech,",
-            "suffix": "glowing circuitry, reflective surfaces, high-tech grit, electric atmosphere"
-        },
+            "suffix": "glowing circuitry, reflective surfaces, high-tech grit, electric atmosphere"        },
         "Solarpunk": {
             "prefix": "bright solarpunk utopia, organic architecture, lush greenery integrated with technology,",
-            "suffix": "sunlit renewable energy systems, harmonious eco-design, soft optimistic tones"
-        },
+            "suffix": "sunlit renewable energy systems, harmonious eco-design, soft optimistic tones"        },
         "Dieselpunk": {
             "prefix": "dieselpunk retro-industrial world, heavy machinery, 1930s–40s engineered aesthetics,",
-            "suffix": "gritty oil-stained textures, brass fittings, smoky atmospheric haze"
-        },
+            "suffix": "gritty oil-stained textures, brass fittings, smoky atmospheric haze"        },
         "Atompunk": {
             "prefix": "retro-futuristic atompunk aesthetic, mid-century modern sci-fi optimism, chrome curves,",
-            "suffix": "atomic-age motifs, bright vintage colors, clean streamlined technology"
-        },
-
-		"artstyle-steampunk": {
+            "suffix": "atomic-age motifs, bright vintage colors, clean streamlined technology"        },
+		"Steampunk": {
 		    "prefix": "steampunk style ",
 		    "suffix": "antique, mechanical, brass and copper tones, gears, intricate, detailed"},
+        "Post-Apocalyptic": {
+            "prefix": "post-apocalyptic wasteland aesthetic, ruined structures, scavenged gear, desolate landscapes,",
+            "suffix": "dusty muted colors, broken machinery, survival-worn textures, bleak atmospheric haze"        },
+        "Grunge": {
+            "prefix": "grunge aesthetic, dirty textured surfaces, raw distressed materials,",
+            "suffix": "oversaturated shadows, gritty urban decay, rough handmade visual noise"        },
+        "Cyber-Fantasy": {
+            "prefix": "fantasy cyberpunk hybrid world, magic, enchanted weapons merged with high-tech components, hi-tech clothing with glowing runes",
+            "suffix": "mythic creatures enhanced with cybernetics, neon-lit medieval motifs, luminous arcane tech"},
 
-		"retro cyberpunk": {
-		    "prefix": "80's inspired retro cyberpunk style",
-		    "suffix": "synthwave, neon, vibrant, detailed, retro futurism"},
+
+
 
 		##"XXXX": {
 		##    "prefix": "",
