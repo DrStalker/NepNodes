@@ -14,7 +14,7 @@ class NepStyles:
     def INPUT_TYPES(cls):
         return {
             "required": {
-                "style": (list(cls.STYLE_PRESETS.keys()),),
+                "style": (list(STYLE_PRESETS.keys()),),
             },
             "optional": {
                 "prompt": ("STRING", {"default": "", "multiline": True}),                
@@ -27,8 +27,8 @@ class NepStyles:
     OUTPUT_TOOLTIPS = ("The styled prompt","the style's prefix","the styles suffix")
 
     def addStyle(self,style,prompt):
-        prefix = self.STYLE_PRESETS[style]["prefix"]  
-        suffix = self.STYLE_PRESETS[style]["suffix"] 
+        prefix = STYLE_PRESETS[style]["prefix"]  
+        suffix = STYLE_PRESETS[style]["suffix"] 
         stylename = style
         base = prompt.strip() if prompt else ""
         result = f"{prefix}\n{base}\n{suffix}"
