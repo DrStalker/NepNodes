@@ -5,7 +5,7 @@ STYLE_PRESETS = {
 			"suffix": "high contrast, professional photo, sharp focus"},
 		"Medium Format": {
 			"prefix": "medium-format film photograph, movie-still aesthetic", 
-			"suffix": "cinematic key and rim lighting, soft film grain, shallow depth of field, soft film grain and Kodak Portra tones."},
+			"suffix": "cinematic lighting and rim lighting, soft film grain, shallow depth of field, soft film grain and Kodak Portra tones."},
         "Analog Photo": {
             "prefix": "analogue film photograph, grainy texture, soft contrast, warm tonal shifts,slight vignette, subtle chromatic aberration, shallow depth of field, vintage color palette,natural imperfections",
 			"suffix": "captured on vintage film stock, gentle film grain, organic light falloff,faded highlights, muted shadows"},   
@@ -21,6 +21,9 @@ STYLE_PRESETS = {
 		"Greg-Rutkowski-Like": {
 			"prefix": "high-fantasy digital painting with dramatic lighting and richly rendered detail,",
 			"suffix": "epic composition, intricate highlights, atmospheric depth"},    
+        "Dark Painterly Portrait": {
+			"prefix": "moody painterly portrait style, dramatic chiaroscuro lighting, soft shadows,legant classical atmosphere,fine-art photography look, softly blended tones, cinematic depth",
+			"suffix": "atmospheric vignette, soft falloff into darkness, highly sculpted light on the face, rich tonal contrast, refined fine-art mood"},   
 		"Horror": {
 			"prefix": "gothic horror, dramatic chiaroscuro lighting",
 			"suffix": "heavy shadows, oppressive atmosphere, dark cinematic tone"},    
@@ -30,18 +33,15 @@ STYLE_PRESETS = {
         "Gothic": {
             "prefix": "moody gothic atmosphere, muted desaturated colors, soft dramatic lighting, antique textures, somber yet readable tones,",
             "suffix": "subtle shadows, aged stone and weathered surfaces, baroque gloom, atmospheric depth without heavy darkness"},
-		"Cel-shaded": {
-			"prefix": "classical cel-anime flat shading, bold outlines, limited tone variations,",
-			"suffix": "solid color fills, crisp character silhouettes"},	
 		"Comic Book": {
 			"prefix": "Western comic-book illustration, bold outlines, graphic dramatic style,",
 			"suffix": "halftone shading, vivid flat colors, dynamic heroic composition"},            
 		"Manga": {
 			"prefix": "black-and-white manga illustration, strong inking, dramatic panel-style contrast,",
 			"suffix": "screen-tone shading, stylized expressions, dynamic motion lines"},
-		"Anime": {
-			"prefix": "dynamic anime action aesthetic, bold silhouettes, energetic shapes,",
-			"suffix": "cel shading, motion exaggeration, vibrant colors,"},      
+        "Anime": {
+            "prefix": "anime artwork",
+            "suffix": "anime style, key visual, vibrant, studio anime, highly detailed"},
 		"90s-Anime-OVA": {
 			"prefix": "1990s OVA anime aesthetic, sharp cel outlines, retro color palette,",
 			"suffix": "grainy film texture, dramatic highlights, nostalgic shading style"},
@@ -54,9 +54,6 @@ STYLE_PRESETS = {
 		"Pixel Art": {
 			"prefix": "retro pixel art illustration, crisp pixel grid,",
 			"suffix": "limited palette, 8-bit/16-bit aesthetic, nostalgic game style"},
-		"Moebius-Like": {
-			"prefix": "clean-line graphic novel illustration with surreal sci-fi landscapes, flat yet vibrant colors,",
-			"suffix": "precise contour lines, dreamy retro-futurist aesthetic, elegant minimalist shading"},
 		"Dark Moebius-Like": {
 			"prefix": "graphic surrealist fantasy with stark linework and eerie dreamlike architecture,",
 			"suffix": "limited palette, angular compositions, uncanny atmospheric tension"},
@@ -102,9 +99,6 @@ STYLE_PRESETS = {
         "Grunge": {
             "prefix": "grunge aesthetic, dirty textured surfaces, raw distressed materials,",
             "suffix": "oversaturated shadows, gritty urban decay, rough handmade visual noise"        },
-        "Cyber-Fantasy": {
-            "prefix": "fantasy cyberpunk hybrid world, magic, enchanted weapons merged with high-tech components, hi-tech clothing with glowing runes",
-            "suffix": "enhanced with cybernetics, neon-lit medieval motifs, luminous arcane tech"},            
 		"Retro-Space-Opera": {
 			"prefix": "retro space-opera aesthetic, vibrant pulp sci-fi colors,",
 			"suffix": "heroic cosmic scenes, vintage futurism"},
@@ -147,10 +141,108 @@ STYLE_PRESETS = {
         "sai-3d-model": {
             "prefix": "professional 3d model.",
             "suffix": "octane render, highly detailed, volumetric, dramatic lighting"},
+        "John Blanche Style": {
+            "prefix": "grimdark gothic fantasy aesthetic, scratchy ink textures, baroque cluttered details, medieval surrealism,",
+            "suffix": "bleak palette, chaotic linework, decayed ornate motifs, brutal fantastical symbolism, antique occult atmosphere"
+        },
+        "Ansel Adams": {
+            "prefix": "high-contrast large-format black and white photography, dramatic tonal range, crisp micro-detail, deep shadows and bright highlights, rich texture, atmospheric depth,",
+            "suffix": "zone-system inspired exposure, classic fine-art, sharp foreground detail, high clarity, timeless monochrome aesthetic, fine-grain realism"
+        },
+        "Ansel Adams Landscape": {
+            "prefix": "high-contrast large-format black and white photography, dramatic tonal range, crisp micro-detail, deep shadows and bright highlights, rich texture, grand sweeping landscapes, monumental natural scenery, atmospheric depth",
+            "suffix": "zone-system inspired exposure, classic fine-art wilderness photography, sharp foreground detail, expansive skies, majestic natural composition, high clarity, timeless monochrome aesthetic, fine-grain realism"
+        },
+        "Ansel Adams Portrait": {
+            "prefix": "high-contrast black and white fine-art portrait photography, deep rich tonal range, precise zone-system exposure, crisp micro-detail, soft diffused key lighting, classic medium-format look, sculpted highlights and deep shadows, clean minimalist backdrop,",
+            "suffix": "timeless fine-art realism, carefully controlled light and form, natural expression, strong textural definition, dramatic chiaroscuro, pure monochrome aesthetic, refined tonal control, gallery-quality portraiture"
+        },
+        "Lovecraftian": {
+            "prefix": "lovecraftian horror",
+            "suffix": "eldritch, cosmic horror, unknown, mysterious, surreal, highly detailed"
+        },
+        "Cinematic": {
+            "prefix": "cinematic film still",
+            "suffix": "shallow depth of field, vignette, highly detailed, high budget, bokeh, cinemascope, moody, epic, gorgeous, film grain, grainy"
+        },
+        "Ethereal Fantasy": {
+            "prefix": "ethereal fantasy concept art of",
+            "suffix": "magnificent, celestial, ethereal, painterly, epic, majestic, magical, fantasy art, cover art, dreamy"
+        },
+        "Neonpunk": {
+            "prefix": "neonpunk style",
+            "suffix": "cyberpunk, vaporwave, neon, vibes, vibrant, stunningly beautiful, crisp, detailed, sleek, ultramodern, magenta highlights, dark purple shadows, high contrast, cinematic, ultra detailed, intricate, professional"
+        },
+        "Abstract": {
+            "prefix": "abstract style",
+            "suffix": "non-representational, colors and shapes, expression of feelings, imaginative, highly detailed"
+        },
+        "Art Deco": {
+            "prefix": "art deco style",
+            "suffix": "geometric shapes, bold colors, luxurious, elegant, decorative, symmetrical, ornate, detailed"
+        },
+        "watercolor": {
+            "prefix": "watercolor painting",
+            "suffix": "vibrant, beautiful, painterly, detailed, textural, artistic"
+        },
+        "Futuristic Sci Fi": {
+            "prefix": "sci-fi style",
+            "suffix": "futuristic, technological, alien worlds, space themes, advanced civilizations"
+        },
+        "Futuristic Vaporwave": {
+            "prefix": "vaporwave style",
+            "suffix": "retro aesthetic, cyberpunk, vibrant, neon colors, vintage 80s and 90s style, highly detailed"
+        },
+        "Cyberpunk Game": {
+            "prefix": "cyberpunk game style",
+            "suffix": "neon, dystopian, futuristic, digital, vibrant, detailed, high contrast, reminiscent of cyberpunk genre video games"
+        },
+        "Fighting Game": {
+            "prefix": "fighting game style",
+            "suffix": "dynamic, vibrant, action-packed, detailed character design, reminiscent of fighting video games"
+        },
+        "RPG Fantasy Game": {
+            "prefix": "role-playing game (RPG) style fantasy",
+            "suffix": "detailed, vibrant, immersive, reminiscent of high fantasy RPG games"
+        },
+        "Dystopian": {
+            "prefix": "dystopian style",
+            "suffix": "bleak, post-apocalyptic, somber, dramatic, highly detailed"
+        },
+        "Stained Glass": {
+            "prefix": "stained glass style",
+            "suffix": "vibrant, beautiful, translucent, intricate, detailed"
+        },
+        "Stacked Papercut": {
+            "prefix": "stacked papercut art of",
+            "suffix": "3D, layered, dimensional, depth, precision cut, stacked layers, papercut, high contrast"
+        },
+        "Film Noir": {
+            "prefix": "film noir style",
+            "suffix": "monochrome, high contrast, dramatic shadows, 1940s style, mysterious, cinematic"
+        },
+        "Long Exposure": {
+            "prefix": "long exposure photo of",
+            "suffix": "Blurred motion, streaks of light, surreal, dreamy, ghosting effect, highly detailed"
+        },
+        "Neon Noir": {
+            "prefix": "neon noir",
+            "suffix": "cyberpunk, dark, rainy streets, neon signs, high contrast, low light, vibrant, highly detailed"
+        },
+        "Tilt Shift": {
+            "prefix": "tilt-shift photo of",
+            "suffix": "selective focus, miniature effect, blurred background, highly detailed, vibrant, perspective control"
+        },
+
+        # I ask an LLM to make the weirest styles it could think of....
+        # this is the only one that worth keeping
+        "Nebula Witchcraft": {
+            "prefix": "cosmic witchcraft infused with nebula dust, swirling astral vapors, stellar incantations,",
+            "suffix": "starfire glow, spectral spell trails, vast magical deep-space haze"
+        },
 
 
-
-
+}
 
 		##"XXXX": {
 		##    "prefix": "",
@@ -172,4 +264,4 @@ STYLE_PRESETS = {
 		##"XXXX": {
 		##    "prefix": "",
 		##    "suffix": ""},
-	}       
+   
