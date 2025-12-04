@@ -54,6 +54,9 @@ STYLE_PRESETS = {
 		"Pixel Art": {
 			"prefix": "retro pixel art illustration, crisp pixel grid,",
 			"suffix": "limited palette, 8-bit/16-bit aesthetic, nostalgic game style"},
+        "Blanchitsu-Like":{
+ 			"prefix": "digital illustration, red yellow rust palette, apocalyptic Warhammer chaos aesthetic, scorched orange skies, baroque gothic ornamentation, sketchy chaotic brushwork, dirty parchment tones mixed with blood-red and rust,  skulls and relics, ornate armor, insanity and zealotry, fever-dream battlefield energy, painterly grit and entropy,",
+			"suffix": "grimdark illustration, medieval religious iconography, chaotic composition, textured traditional media feel, ink-smudged edges, heavy contrast, stained parchment ambiance, raw painterly strokes, brutal gothic fantasy mood, IN THE GRIM DARKNESS OF THE FAR FUTURE THERE IS ONLY WAR"},       
 		"Dark Moebius-Like": {
 			"prefix": "graphic surrealist fantasy with stark linework and eerie dreamlike architecture,",
 			"suffix": "limited palette, angular compositions, uncanny atmospheric tension"},
@@ -105,6 +108,10 @@ STYLE_PRESETS = {
 		"Baroque": {
 			"prefix": "dramatic baroque painting style, deep contrast, rich ornamental detail,",
 			"suffix": "intense chiaroscuro lighting, grand expressive composition"},
+        "Grim Baroque Engraving": {
+            "prefix": "grimdark gothic fantasy aesthetic, scratchy ink textures, baroque cluttered details, medieval surrealism,",
+            "suffix": "bleak palette, chaotic linework, decayed ornate motifs, brutal fantastical symbolism, antique occult atmosphere"
+        },            
 		"Renaissance": {
 			"prefix": "renaissance classical painting style, balanced composition, naturalistic anatomy,",
 			"suffix": "soft sfumato shading, muted warm tones, detailed drapery"},
@@ -141,10 +148,6 @@ STYLE_PRESETS = {
         "sai-3d-model": {
             "prefix": "professional 3d model.",
             "suffix": "octane render, highly detailed, volumetric, dramatic lighting"},
-        "John Blanche Style": {
-            "prefix": "grimdark gothic fantasy aesthetic, scratchy ink textures, baroque cluttered details, medieval surrealism,",
-            "suffix": "bleak palette, chaotic linework, decayed ornate motifs, brutal fantastical symbolism, antique occult atmosphere"
-        },
         "Ansel Adams": {
             "prefix": "high-contrast large-format black and white photography, dramatic tonal range, crisp micro-detail, deep shadows and bright highlights, rich texture, atmospheric depth,",
             "suffix": "zone-system inspired exposure, classic fine-art, sharp foreground detail, high clarity, timeless monochrome aesthetic, fine-grain realism"
