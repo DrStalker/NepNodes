@@ -33,6 +33,18 @@ STYLE_PRESETS = {
         "Gothic": {
             "prefix": "moody gothic atmosphere, muted desaturated colors, soft dramatic lighting, antique textures, somber yet readable tones,",
             "suffix": "subtle shadows, aged stone and weathered surfaces, baroque gloom, atmospheric depth without heavy darkness"},
+        #"Ansel Adams": {
+        #    "prefix": "high-contrast large-format black and white photography, dramatic tonal range, crisp micro-detail, deep shadows and bright highlights, rich texture, atmospheric depth,",
+        #    "suffix": "zone-system inspired exposure, classic fine-art, sharp foreground detail, high clarity, timeless monochrome aesthetic, fine-grain realism"
+        #},
+        "Ansel Adams Landscape": {
+            "prefix": "high-contrast large-format black and white photography, dramatic tonal range, crisp micro-detail, deep shadows and bright highlights, rich texture, grand sweeping landscapes, monumental natural scenery, atmospheric depth",
+            "suffix": "zone-system inspired exposure, classic fine-art wilderness photography, sharp foreground detail, expansive skies, majestic natural composition, high clarity, timeless monochrome aesthetic, fine-grain realism"
+        },
+        "Ansel Adams Portrait": {
+            "prefix": "high-contrast black and white fine-art portrait photography, deep rich tonal range, precise zone-system exposure, crisp micro-detail, soft diffused key lighting, classic medium-format look, sculpted highlights and deep shadows, clean minimalist backdrop,",
+            "suffix": "timeless fine-art realism, carefully controlled light and form, natural expression, strong textural definition, dramatic chiaroscuro, pure monochrome aesthetic, refined tonal control, gallery-quality portraiture"
+        },            
 		"Comic Book": {
 			"prefix": "Western comic-book illustration, bold outlines, graphic dramatic style,",
 			"suffix": "halftone shading, vivid flat colors, dynamic heroic composition"},            
@@ -111,7 +123,10 @@ STYLE_PRESETS = {
         "Grim Baroque Engraving": {
             "prefix": "grimdark gothic fantasy aesthetic, scratchy ink textures, baroque cluttered details, medieval surrealism,",
             "suffix": "bleak palette, chaotic linework, decayed ornate motifs, brutal fantastical symbolism, antique occult atmosphere"
-        },            
+        },         
+		"Victorian Storybook": {
+		    "prefix": "whimsical fantasy sketch, style with loose expressive ink linework, soft sketchy contours, elongated and exaggerated character proportions, gentle watercolor washes in muted blues and earth tones, pale yellows, smoky grays, stained parchment background texture, playful yet slightly eerie atmosphere, ornate swirling costume details, lightly shaded forms with airy translucent layers,",
+		    "suffix": "hand-drawn ink-and-watercolor aesthetic, textured paper grain, subtle ink bleed and splatter, warm antiqued color palette, soft gradients and uneven washes, lively expressive characters, dreamy storybook fantasy mood, traditional illustration finish."},
 		"Renaissance": {
 			"prefix": "renaissance classical painting style, balanced composition, naturalistic anatomy,",
 			"suffix": "soft sfumato shading, muted warm tones, detailed drapery"},
@@ -148,18 +163,6 @@ STYLE_PRESETS = {
         "sai-3d-model": {
             "prefix": "professional 3d model.",
             "suffix": "octane render, highly detailed, volumetric, dramatic lighting"},
-        "Ansel Adams": {
-            "prefix": "high-contrast large-format black and white photography, dramatic tonal range, crisp micro-detail, deep shadows and bright highlights, rich texture, atmospheric depth,",
-            "suffix": "zone-system inspired exposure, classic fine-art, sharp foreground detail, high clarity, timeless monochrome aesthetic, fine-grain realism"
-        },
-        "Ansel Adams Landscape": {
-            "prefix": "high-contrast large-format black and white photography, dramatic tonal range, crisp micro-detail, deep shadows and bright highlights, rich texture, grand sweeping landscapes, monumental natural scenery, atmospheric depth",
-            "suffix": "zone-system inspired exposure, classic fine-art wilderness photography, sharp foreground detail, expansive skies, majestic natural composition, high clarity, timeless monochrome aesthetic, fine-grain realism"
-        },
-        "Ansel Adams Portrait": {
-            "prefix": "high-contrast black and white fine-art portrait photography, deep rich tonal range, precise zone-system exposure, crisp micro-detail, soft diffused key lighting, classic medium-format look, sculpted highlights and deep shadows, clean minimalist backdrop,",
-            "suffix": "timeless fine-art realism, carefully controlled light and form, natural expression, strong textural definition, dramatic chiaroscuro, pure monochrome aesthetic, refined tonal control, gallery-quality portraiture"
-        },
         "Lovecraftian": {
             "prefix": "lovecraftian horror",
             "suffix": "eldritch, cosmic horror, unknown, mysterious, surreal, highly detailed"
@@ -245,11 +248,9 @@ STYLE_PRESETS = {
         },
 
 
+
 }
 
-		##"XXXX": {
-		##    "prefix": "",
-		##    "suffix": ""},
 
 		##"XXXX": {
 		##    "prefix": "",
