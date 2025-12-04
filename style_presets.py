@@ -3,27 +3,27 @@ STYLE_PRESETS = {
 		"Photo": {
 			"prefix": "A cinematic photograph, natural lighting",
 			"suffix": "high contrast, professional photo, sharp focus"},
+		"Medium Format": {
+			"prefix": "medium-format film photograph, movie-still aesthetic", 
+			"suffix": "cinematic key and rim lighting, soft film grain, shallow depth of field, soft film grain and Kodak Portra tones."},
+        "Analog Photo": {
+            "prefix": "analogue film photograph, grainy texture, soft contrast, warm tonal shifts,slight vignette, subtle chromatic aberration, shallow depth of field, vintage color palette,natural imperfections",
+			"suffix": "captured on vintage film stock, gentle film grain, organic light falloff,faded highlights, muted shadows"},   
 		"Digital Art": {
 			"prefix": "masterpiece, best quality, amazing quality, highly detailed digital illustration, rich textures",
 			"suffix": ""},
 		"Digital Art Vibrant": {
 			"prefix": "a highly detailed digital artwork, vibrant color grading, smooth shading, high contrast, cinematic contrast, semi-illustrated, semi-realistic",
 			"suffix": ""},
+        "Digital Illustration": {
+            "prefix": "Digital Illustration",
+            "suffix": ""},              
 		"Greg-Rutkowski-Like": {
 			"prefix": "high-fantasy digital painting with dramatic lighting and richly rendered detail,",
 			"suffix": "epic composition, intricate highlights, atmospheric depth"},    
-		"horror": {
+		"Horror": {
 			"prefix": "gothic horror, dramatic chiaroscuro lighting",
 			"suffix": "heavy shadows, oppressive atmosphere, dark cinematic tone"},    
-		"Medium Format": {
-			"prefix": "medium-format film photograph, movie-still aesthetic", 
-			"suffix": "cinematic key and rim lighting, soft film grain, shallow depth of field, soft film grain and Kodak Portra tones."},
-        "Analog Photo": {
-            "prefix": "analogue film photograph, grainy texture, soft contrast, warm tonal shifts,slight vignette, subtle chromatic aberration, shallow depth of field, vintage color palette,natural imperfections",
-			"suffix": "captured on vintage film stock, gentle film grain, organic light falloff,faded highlights, muted shadows"},
-        "Digital Illustration": {
-            "prefix": "Digital Illustration",
-            "suffix": ""},           
 		"1800s photo": {
 			"prefix": "1800s photographic plate",
 			"suffix": "sepia daguerreotype style, aged texture, damaged film, antique photographic imperfections"},
@@ -33,15 +33,24 @@ STYLE_PRESETS = {
 		"Cel-shaded": {
 			"prefix": "classical cel-anime flat shading, bold outlines, limited tone variations,",
 			"suffix": "solid color fills, crisp character silhouettes"},	
-		"Anime": {
-			"prefix": "dynamic anime action aesthetic, bold silhouettes, energetic shapes,",
-			"suffix": "cel shading, motion exaggeration, vibrant colors,"},            
-		"Manga": {
-			"prefix": "black-and-white manga illustration, strong inking, dramatic panel-style contrast,",
-			"suffix": "screen-tone shading, stylized expressions, dynamic motion lines"},
 		"Comic Book": {
 			"prefix": "Western comic-book illustration, bold outlines, graphic dramatic style,",
 			"suffix": "halftone shading, vivid flat colors, dynamic heroic composition"},            
+		"Manga": {
+			"prefix": "black-and-white manga illustration, strong inking, dramatic panel-style contrast,",
+			"suffix": "screen-tone shading, stylized expressions, dynamic motion lines"},
+		"Anime": {
+			"prefix": "dynamic anime action aesthetic, bold silhouettes, energetic shapes,",
+			"suffix": "cel shading, motion exaggeration, vibrant colors,"},      
+		"90s-Anime-OVA": {
+			"prefix": "1990s OVA anime aesthetic, sharp cel outlines, retro color palette,",
+			"suffix": "grainy film texture, dramatic highlights, nostalgic shading style"},
+		"2000s-Cel-Digital-Hybrid": {
+			"prefix": "early-2000s anime hybrid cel/digital look, bright saturated colors,",
+			"suffix": "clean digital gradients, crisp character silhouettes"},	
+		"Retro-VHS-Anime": {
+			"prefix": "retro VHS anime aesthetic, soft analog blur, muted colors,",
+			"suffix": "chromatic bleeding, scanlines, tape noise artifacts"},	
 		"Pixel Art": {
 			"prefix": "retro pixel art illustration, crisp pixel grid,",
 			"suffix": "limited palette, 8-bit/16-bit aesthetic, nostalgic game style"},
@@ -72,18 +81,33 @@ STYLE_PRESETS = {
 		"Painterly-Steampunk": {
 			"prefix": "steampunk fantasy painting, brass machinery, Victorian industrial mood,",
 			"suffix": "cogs, rivets, warm antique metal tones"},
+        "Cyberpunk": {
+            "prefix": "neon-drenched cyberpunk future, dense holograms, rain-soaked streets, sleek urban tech,",
+            "suffix": "glowing circuitry, reflective surfaces, high-tech grit, electric atmosphere"        },
+        "Solarpunk": {
+            "prefix": "bright solarpunk utopia, organic architecture, lush greenery integrated with technology,",
+            "suffix": "sunlit renewable energy systems, harmonious eco-design, soft optimistic tones"        },
+        "Dieselpunk": {
+            "prefix": "dieselpunk retro-industrial world, heavy machinery, 1930s–40s engineered aesthetics,",
+            "suffix": "gritty oil-stained textures, brass fittings, smoky atmospheric haze"        },
+        "Atompunk": {
+            "prefix": "retro-futuristic atompunk aesthetic, mid-century modern sci-fi optimism, chrome curves,",
+            "suffix": "atomic-age motifs, bright vintage colors, clean streamlined technology"        },
+		"Steampunk": {
+		    "prefix": "steampunk style ",
+		    "suffix": "antique, mechanical, brass and copper tones, gears, intricate, detailed"},
+        "Post-Apocalyptic": {
+            "prefix": "post-apocalyptic wasteland aesthetic, ruined structures, scavenged gear, desolate landscapes,",
+            "suffix": "dusty muted colors, broken machinery, survival-worn textures, bleak atmospheric haze"        },
+        "Grunge": {
+            "prefix": "grunge aesthetic, dirty textured surfaces, raw distressed materials,",
+            "suffix": "oversaturated shadows, gritty urban decay, rough handmade visual noise"        },
+        "Cyber-Fantasy": {
+            "prefix": "fantasy cyberpunk hybrid world, magic, enchanted weapons merged with high-tech components, hi-tech clothing with glowing runes",
+            "suffix": "enhanced with cybernetics, neon-lit medieval motifs, luminous arcane tech"},            
 		"Retro-Space-Opera": {
 			"prefix": "retro space-opera aesthetic, vibrant pulp sci-fi colors,",
 			"suffix": "heroic cosmic scenes, vintage futurism"},
-		"90s-Anime-OVA": {
-			"prefix": "1990s OVA anime aesthetic, sharp cel outlines, retro color palette,",
-			"suffix": "grainy film texture, dramatic highlights, nostalgic shading style"},
-		"2000s-Cel-Digital-Hybrid": {
-			"prefix": "early-2000s anime hybrid cel/digital look, bright saturated colors,",
-			"suffix": "clean digital gradients, crisp character silhouettes"},	
-		"Retro-VHS-Anime": {
-			"prefix": "retro VHS anime aesthetic, soft analog blur, muted colors,",
-			"suffix": "chromatic bleeding, scanlines, tape noise artifacts"},	
 		"Baroque": {
 			"prefix": "dramatic baroque painting style, deep contrast, rich ornamental detail,",
 			"suffix": "intense chiaroscuro lighting, grand expressive composition"},
@@ -123,30 +147,7 @@ STYLE_PRESETS = {
         "sai-3d-model": {
             "prefix": "professional 3d model.",
             "suffix": "octane render, highly detailed, volumetric, dramatic lighting"},
-        "Cyberpunk": {
-            "prefix": "neon-drenched cyberpunk future, dense holograms, rain-soaked streets, sleek urban tech,",
-            "suffix": "glowing circuitry, reflective surfaces, high-tech grit, electric atmosphere"        },
-        "Solarpunk": {
-            "prefix": "bright solarpunk utopia, organic architecture, lush greenery integrated with technology,",
-            "suffix": "sunlit renewable energy systems, harmonious eco-design, soft optimistic tones"        },
-        "Dieselpunk": {
-            "prefix": "dieselpunk retro-industrial world, heavy machinery, 1930s–40s engineered aesthetics,",
-            "suffix": "gritty oil-stained textures, brass fittings, smoky atmospheric haze"        },
-        "Atompunk": {
-            "prefix": "retro-futuristic atompunk aesthetic, mid-century modern sci-fi optimism, chrome curves,",
-            "suffix": "atomic-age motifs, bright vintage colors, clean streamlined technology"        },
-		"Steampunk": {
-		    "prefix": "steampunk style ",
-		    "suffix": "antique, mechanical, brass and copper tones, gears, intricate, detailed"},
-        "Post-Apocalyptic": {
-            "prefix": "post-apocalyptic wasteland aesthetic, ruined structures, scavenged gear, desolate landscapes,",
-            "suffix": "dusty muted colors, broken machinery, survival-worn textures, bleak atmospheric haze"        },
-        "Grunge": {
-            "prefix": "grunge aesthetic, dirty textured surfaces, raw distressed materials,",
-            "suffix": "oversaturated shadows, gritty urban decay, rough handmade visual noise"        },
-        "Cyber-Fantasy": {
-            "prefix": "fantasy cyberpunk hybrid world, magic, enchanted weapons merged with high-tech components, hi-tech clothing with glowing runes",
-            "suffix": "mythic creatures enhanced with cybernetics, neon-lit medieval motifs, luminous arcane tech"},
+
 
 
 
