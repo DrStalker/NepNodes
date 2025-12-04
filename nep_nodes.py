@@ -8,7 +8,7 @@
 
 import math
 import re
-
+import sys
 
 
 #---------------------------------------------------------------------------------------------------------------------------------------------------#
@@ -121,7 +121,7 @@ class NepRatioResolution:
 # based on JPS tools multiply
 class NepXOR_INT_INT:
 
-    def init(self):
+    def __init__(self):
         pass
 
     @classmethod
@@ -143,6 +143,92 @@ class NepXOR_INT_INT:
         return (int(xor),)
 
 
+#---------------------------------------------------------------------------------------------------------------------------------------------------#
+
+class NepSwitchIntsOnBool:
+
+    def __init__(self):
+        pass    
+
+    @classmethod
+    def INPUT_TYPES(cls):
+        return {
+            "required": {
+                "true1": ("INT", {"default": 0,"min":-1000000000000000,"max":1000000000000000}),
+                "true2": ("INT", {"default": 0,"min":-1000000000000000,"max":1000000000000000}),
+                "true3": ("INT", {"default": 0,"min":-1000000000000000,"max":1000000000000000}),
+                "true4": ("INT", {"default": 0,"min":-1000000000000000,"max":1000000000000000}),
+                "false1": ("INT", {"default": 0,"min":-1000000000000000,"max":1000000000000000}),
+                "false2": ("INT", {"default": 0,"min":-1000000000000000,"max":1000000000000000}),
+                "false3": ("INT", {"default": 0,"min":-1000000000000000,"max":1000000000000000}),
+                "false4": ("INT", {"default": 0,"min":-1000000000000000,"max":1000000000000000}),
+                "mode": ("BOOLEAN", {"default": False,}),                
+            }
+        }
+
+    RETURN_TYPES = ("INT", "INT", "INT", "INT",)
+    RETURN_NAMES = ("out1", "out2", "out3", "out4", )
+    FUNCTION = "chooseints"
+    CATEGORY = "NepNodes"
+
+    def chooseints(self, mode, true1, true2, true3, true4, false1, false2, false3, false4, ):
+        if mode:
+            return (true1, true2, true3, true4, )
+        return (false1, false2, false3, false4,)
+        
+#---------------------------------------------------------------------------------------------------------------------------------------------------#
+
+class NepSwitchOneFloatOnBool:
+    def __init__(self):
+        pass
+
+    @classmethod
+    def INPUT_TYPES(cls):
+        return {
+            "required": {
+                "float_true": ("FLOAT",),
+                "float_false": ("FLOAT",),
+                "mode": ("BOOLEAN", {"default": False,}), 
+            }
+        }
+
+    RETURN_TYPES = ("FLOAT",)
+    FUNCTION = "choosefloat"
+    CATEGORY = "NepNodes"
+
+    def choosefloat(self, float_true, float_false, mode=True):
+
+        if mode:
+            return (float_true, )
+        else:
+            return (float_false, )
+        
+#---------------------------------------------------------------------------------------------------------------------------------------------------#
+
+class NepSwitchOneIntOnBool:
+    def __init__(self):
+        pass
+
+    @classmethod
+    def INPUT_TYPES(cls):
+        return {
+            "required": {
+                "int_true": ("INT",),
+                "int_false": ("INT",),
+                "mode": ("BOOLEAN", {"default": False,}), 
+            }
+        }
+
+    RETURN_TYPES = ("INT",)
+    FUNCTION = "chooseint"
+    CATEGORY = "NepNodes"
+
+    def chooseint(self, int_true, int_false, mode=True):
+
+        if mode:
+            return (int_true, )
+        else:
+            return (int_false, )        
 #---------------------------------------------------------------------------------------------------------------------------------------------------#
 
 
@@ -208,11 +294,61 @@ class NepSafeString:
         cleaned = cleaned.strip()
         return (cleaned,)
 
+#---------------------------------------------------------------------------------------------------------------------------------------------------
+class NepTooManyInputs:
+
+    @classmethod
+    def INPUT_TYPES(cls):
+        return {
+            "required": {
+                "threshold": ("INT", {"default": 1, "min": 0}),
+            },
+            "optional": {
+                "value1": ("*",""),   # accept ANY type
+                "value2": ("*",""),
+                "value3": ("*",""),
+                "value4": ("*",""),
+            }            
+        }
+
+    RETURN_TYPES = ("BOOL",)
+    RETURN_NAMES = ("result",)
+    FUNCTION = "compute"
+    CATEGORY = "Logic"
+
+    def compute(self, value1, value2, value3, value4, threshold):
+        # Count how many inputs are NOT None
+        non_none_count = sum(v is not None for v in (value1, value2, value3, value4))
+        return (non_none_count > threshold,)
+
 
 
 
 #---------------------------------------------------------------------------------------------------------------------------------------------------
-#class NepPipeIn 
+class NepPrintStringIfTrue:
+
+    @classmethod
+    def INPUT_TYPES(cls):
+        return {
+            "required": {
+                "trigger": ("BOOL", {"default": False}),
+                "text": ("STRING", {"default": "", "multiline": True}),
+            }
+        }
+
+    RETURN_TYPES = ("STRING",)
+    RETURN_NAMES = ("text_out",)
+    FUNCTION = "run"
+    CATEGORY = "Debug"
+
+    def run(self, trigger, text):
+        if trigger:
+            # ANSI 
+            color_code = "\033[96m"   # bright cyan
+            reset_code = "\033[0m"
+            print(f"{color_code}{text}{reset_code}", file=sys.stdout, flush=True)
+
+        return (text,)
  
 #---------------------------------------------------------------------------------------------------------------------------------------------------
 #class NepPipeOut
@@ -235,6 +371,11 @@ NODE_CLASS_MAPPINGS = {
     "Resolution from Ratio (NEP)": NepRatioResolution,
     "NepWanResolutions": NepWanResolutions, 
     "NepSafeString": NepSafeString,
+    "NepSwitchIntsOnBool": NepSwitchIntsOnBool,
+    "NepSwitchOneFloatOnBool": NepSwitchOneFloatOnBool,
+    "NepSwitchOneIntOnBool": NepSwitchOneIntOnBool,
+    "NepTooManyInputs": NepTooManyInputs,
+    "NepPrintStringIfTrue": NepPrintStringIfTrue,
 }
 
 NODE_DISPLAY_NAME_MAPPINGS = {
@@ -243,4 +384,9 @@ NODE_DISPLAY_NAME_MAPPINGS = {
     "NepRatioResolution": "Resolution from Ratio (NEP)",
     "NepWanResolutions": "WAN Resolutions (NEP)",
     "NepSafeString": "Safe String (NEP)",
+    "NepSwitchIntsOnBool": "Switch 4xInts on bool (Nep)",
+    "NepSwitchOneFloatOnBool": "Simple Float Switch (NEP)",
+    "NepSwitchOneIntOnBool": "Simple Int Switch (NEP)",
+    "NepTooManyInputs": "Nep Too Many Inputs (NEP)",
+    "NepPrintStringIfTrue": "Print String If True (NEP)",
 }

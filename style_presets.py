@@ -9,18 +9,27 @@ STYLE_PRESETS = {
 		"Digital Art Vibrant": {
 			"prefix": "a highly detailed digital artwork, vibrant color grading, smooth shading, high contrast, cinematic contrast, semi-illustrated, semi-realistic",
 			"suffix": ""},
+		"Greg-Rutkowski-Like": {
+			"prefix": "high-fantasy digital painting with dramatic lighting and richly rendered detail,",
+			"suffix": "epic composition, intricate highlights, atmospheric depth"},    
+		"horror": {
+			"prefix": "gothic horror, dramatic chiaroscuro lighting",
+			"suffix": "heavy shadows, oppressive atmosphere, dark cinematic tone"},    
 		"Medium Format": {
 			"prefix": "medium-format film photograph, movie-still aesthetic", 
 			"suffix": "cinematic key and rim lighting, soft film grain, shallow depth of field, soft film grain and Kodak Portra tones."},
+        "Analog Photo": {
+            "prefix": "analogue film photograph, grainy texture, soft contrast, warm tonal shifts,slight vignette, subtle chromatic aberration, shallow depth of field, vintage color palette,natural imperfections",
+			"suffix": "captured on vintage film stock, gentle film grain, organic light falloff,faded highlights, muted shadows"},
+        "Digital Illustration": {
+            "prefix": "Digital Illustration",
+            "suffix": ""},           
 		"1800s photo": {
 			"prefix": "1800s photographic plate",
 			"suffix": "sepia daguerreotype style, aged texture, damaged film, antique photographic imperfections"},
         "Gothic": {
             "prefix": "moody gothic atmosphere, muted desaturated colors, soft dramatic lighting, antique textures, somber yet readable tones,",
             "suffix": "subtle shadows, aged stone and weathered surfaces, baroque gloom, atmospheric depth without heavy darkness"},
-		"horror": {
-			"prefix": "gothic horror, dramatic chiaroscuro lighting",
-			"suffix": "heavy shadows, oppressive atmosphere, dark cinematic tone"},    
 		"Cel-shaded": {
 			"prefix": "classical cel-anime flat shading, bold outlines, limited tone variations,",
 			"suffix": "solid color fills, crisp character silhouettes"},	
@@ -48,9 +57,6 @@ STYLE_PRESETS = {
 		"Loish-Like": {
 			"prefix": "smooth stylized character illustration with soft feminine shapes and warm expressive palettes,",
 			"suffix": "painterly shading, gentle gradients, emotive storytelling focus"},
-		"Greg-Rutkowski-Like": {
-			"prefix": "high-fantasy digital painting with dramatic lighting and richly rendered detail,",
-			"suffix": "epic composition, intricate highlights, atmospheric depth"},
 		"Syd Mead-Like": {
 			"prefix": "sleek retro-futurist industrial design illustration, clean functional geometry,",
 			"suffix": "polished surfaces, advanced tech motifs, cinematic sci-fi scale"},
