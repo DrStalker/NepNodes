@@ -20,22 +20,22 @@ STYLE_PRESETS = {
 		FAV+"Medium Format": {
 			"prefix": "medium-format film photograph, movie-still aesthetic", 
 			"suffix": "cinematic lighting and rim lighting, soft film grain, shallow depth of field, soft film grain and Kodak Portra tones."},
-        FAV+"Favorites"+"Analog Photo": {
+        FAV+"Analog Photo": {
             "prefix": "analogue film photograph, grainy texture, soft contrast, warm tonal shifts,slight vignette, subtle chromatic aberration, shallow depth of field, vintage color palette,natural imperfections",
 			"suffix": "captured on vintage film stock, gentle film grain, organic light falloff,faded highlights, muted shadows"},   
-		FAV+"Favorites+"+"Digital Art Vibrant": {
+		FAV+"Digital Art Vibrant": {
 			"prefix": "a highly detailed digital artwork, vibrant color grading, smooth shading, high contrast, cinematic contrast, semi-illustrated, semi-realistic",
 			"suffix": ""},
-		FAV+"Favorites+"+"Greg-Rutkowski-Like": {
+		FAV+"Greg-Rutkowski-Like": {
 			"prefix": "high-fantasy digital painting with dramatic lighting and richly rendered detail,",
 			"suffix": "epic composition, intricate highlights, atmospheric depth"},    
-        FAV+"Favorites+"+"Blanchitsu-Like":{
+        FAV+"Blanchitsu-Like":{
  			"prefix": "digital illustration, red yellow rust palette, apocalyptic Warhammer chaos aesthetic, scorched orange skies, baroque gothic ornamentation, sketchy chaotic brushwork, dirty parchment tones mixed with blood-red and rust,  skulls and relics, ornate armor, insanity and zealotry, fever-dream battlefield energy, painterly grit and entropy,",
 			"suffix": "grimdark illustration, medieval religious iconography, chaotic composition, textured traditional media feel, ink-smudged edges, heavy contrast, stained parchment ambiance, raw painterly strokes, brutal gothic fantasy mood, IN THE GRIM DARKNESS OF THE FAR FUTURE THERE IS ONLY WAR"},       
-		FAV+"Favorites+"+"Horror": {
+		FAV+"Horror": {
 			"prefix": "gothic horror, dramatic chiaroscuro lighting",
 			"suffix": "heavy shadows, oppressive atmosphere, dark cinematic tone"},    
-		FAV+"Favorites+"+"Epic-Concept-Art": {
+		FAV+"Epic-Concept-Art": {
 			"prefix": "cinematic AAA concept art style, sweeping vistas, detailed structures,",
 			"suffix": "heroic composition, atmospheric depth, ultra-polished rendering"},
 
