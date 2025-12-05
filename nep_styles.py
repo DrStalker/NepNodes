@@ -1,5 +1,4 @@
 from .style_presets import STYLE_PRESETS 
-from .style_presets_cat import STYLE_PRESETS as STYLE_PRESETS_CAT
 #---------------------------------------------------------------------------------------------------------------------------------------------------#
 
 class NepStyles:
@@ -39,7 +38,7 @@ class NepStyles:
 
 class NepStylesNoApply:
     """
-    A node that lets the user choose a style preset (prefix + suffix)
+    A node that lets the user choose a style preset (prefix + suffix) but doens't waste space with the promt and applying the style
     """    
     def init(self):
         pass
@@ -66,6 +65,9 @@ class NepStylesNoApply:
 #---------------------------------------------------------------------------------------------------------------------------------------------------#
 #This doesn't hook up to the style combo box so I need to figure out how to make the input/out tyles match, like "sampler" and other stuff that is chosen from a list matches.
 class NepStylesPicker:
+    """
+    Supposed to be a remote picker for a style, but it doesn;t link up. I might fix that one day.
+    """
     def init(self):
         pass
 
