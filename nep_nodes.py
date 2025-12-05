@@ -270,6 +270,7 @@ class NepRemoveFirstOrLastImageFromBatch:
 class NepSafeString:
     #"""
     #Makes a string safe for use in filenames
+    #Replaces removed characters with a new string (shcih can be empty)
     #""""
 
     @classmethod
@@ -277,6 +278,7 @@ class NepSafeString:
         return {
             "required": {
                 "text": ("STRING", {"multiline": True, "default": ""}),
+                "replacement": ("STRING", {"multiline": False, "default": ""}),
             }
         }
 
@@ -287,12 +289,13 @@ class NepSafeString:
 
     INVALID_CHARS = r'[\\/:*?"<>|\n\r\t]'
 
-    def maketextsafe(self, text):
+    def maketextsafe(self, text,replacement=""):
         if len(text) > 100:  #Max 100 characters
             text = text[:100]
-        cleaned = re.sub(self.INVALID_CHARS, "", text)
+        cleaned = re.sub(self.INVALID_CHARS, replacement, text)
         cleaned = cleaned.strip()
         return (cleaned,)
+
 
 #---------------------------------------------------------------------------------------------------------------------------------------------------
 class NepTooManyInputs:

@@ -37,60 +37,67 @@ class NepStyles:
 
 #---------------------------------------------------------------------------------------------------------------------------------------------------#
 
-class NepStylesCat:
+class NepStylesNoApply:
     """
-    A node that organizes styles into categories and applies prefix/suffix.
-    """
-
-    def __init__(self):
+    A node that lets the user choose a style preset (prefix + suffix)
+    """    
+    def init(self):
         pass
 
     @classmethod
     def INPUT_TYPES(cls):
-        categories = list(STYLE_PRESETS_CAT.keys())
-
         return {
             "required": {
-                "category": (categories, {}),
-                "style": ([], {"dynamic": True}),
+                "style": (list(STYLE_PRESETS.keys()),),
             },
-            "optional": {
-                "prompt": ("STRING", {"default": "", "multiline": True}),
-            }
         }
+    RETURN_TYPES = ("STRING","STRING","STRING",)
+    RETURN_NAMES = ("prefix","suffix","stylename",)
+    FUNCTION = "getStyle"
+    CATEGORY="NepNodes"
+    OUTPUT_TOOLTIPS = ("the style's prefix","the styles suffix","the name of the chosen style")
 
-    RETURN_TYPES = ("STRING", "STRING", "STRING", "STRING", "STRING")
-    RETURN_NAMES = ("prompt", "prefix", "suffix", "category","stylename")
-    FUNCTION = "addStyle"
-    CATEGORY = "NepNodes"
-    OUTPUT_TOOLTIPS = ("The styled prompt", "prefix", "suffix")
+    def addStyle(self,style,):
+        prefix = STYLE_PRESETS[style]["prefix"]  
+        suffix = STYLE_PRESETS[style]["suffix"] 
+        stylename = style
+        return (prefix,suffix,stylename)
+
+#---------------------------------------------------------------------------------------------------------------------------------------------------#
+#This doesn't hook up to the style combo box so I need to figure out how to make the input/out tyles match, like "sampler" and other stuff that is chosen from a list matches.
+class NepStylesPicker:
+    def init(self):
+        pass
 
     @classmethod
-    def VALIDATE_INPUTS(cls, category, style, **kwargs):
-        """Dynamically regenerate the style dropdown when category changes."""
-        if category is None:
-            return {}
-        styles = list(STYLE_PRESETS[category].keys())
-        return {"style": styles}
+    def INPUT_TYPES(cls):
+        return {
+            "required": {
+                "style": (list(STYLE_PRESETS.keys()),),
+            },
+        }
+    RETURN_TYPES = ("STRING",)
+    RETURN_NAMES = ("style",)
+    FUNCTION = "retStyle"
+    CATEGORY="NepNodes"
+    OUTPUT_TOOLTIPS = ("The styled prompt","the style's prefix","the styles suffix")
+    def retStyle(self,style):
+        return(style)
+#---------------------------------------------------------------------------------------------------------------------------------------------------#
 
-    def addStyle(self, category, style, prompt=""):
-        prefix = STYLE_PRESETS_CAT[category][style]["prefix"]
-        suffix = STYLE_PRESETS_CAT[category][style]["suffix"]
-        stylename = f"{category}-{style}"
-
-        base = prompt.strip() if prompt else ""
-        result = f"{prefix}\n{base}\n{suffix}"
-
-        return (result, prefix, suffix, category, stylename)
 
 #---------------------------------------------------------------------------------------------------------------------------------------------------#
 
 NODE_CLASS_MAPPINGS = {
     "NepStyles": NepStyles,
-    "NepStylesCat": NepStylesCat,
+    "NepStylesNoApply": NepStylesNoApply,
+    "NepStylesPicker": NepStylesPicker,
+
 }
 
 NODE_DISPLAY_NAME_MAPPINGS = {
     "NepStyles": "Styles (NEP)",
-    "NepStylesCat": "Styles II (NEP)",
+    "NepStylesNoApply": "Styles No Apply (NEP)",
+    "NepStylesPicker": "Style Picker (NEP)"
+
 }
