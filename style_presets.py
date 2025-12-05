@@ -1,4 +1,31 @@
+
+# Put this in the key for a style and rgthree's "show nested directories" will sort out putting things into folders.
+FAV="Favorites/"
+
 STYLE_PRESETS = {        
+		FAV+"None": {"prefix":"","suffix":""},
+		FAV+"Medium Format": {
+			"prefix": "medium-format film photograph, movie-still aesthetic", 
+			"suffix": "cinematic lighting and rim lighting, soft film grain, shallow depth of field, soft film grain and Kodak Portra tones."},
+        FAV+"Analog Photo": {
+            "prefix": "analogue film photograph, grainy texture, soft contrast, warm tonal shifts,slight vignette, subtle chromatic aberration, shallow depth of field, vintage color palette,natural imperfections",
+			"suffix": "captured on vintage film stock, gentle film grain, organic light falloff,faded highlights, muted shadows"},   
+		FAV+"Digital Art Vibrant": {
+			"prefix": "a highly detailed digital artwork, vibrant color grading, smooth shading, high contrast, cinematic contrast, semi-illustrated, semi-realistic",
+			"suffix": ""},
+		FAV+"Greg-Rutkowski-Like": {
+			"prefix": "high-fantasy digital painting with dramatic lighting and richly rendered detail,",
+			"suffix": "epic composition, intricate highlights, atmospheric depth"},    
+        FAV+"Blanchitsu-Like":{
+ 			"prefix": "digital illustration, red yellow rust palette, apocalyptic Warhammer chaos aesthetic, scorched orange skies, baroque gothic ornamentation, sketchy chaotic brushwork, dirty parchment tones mixed with blood-red and rust,  skulls and relics, ornate armor, insanity and zealotry, fever-dream battlefield energy, painterly grit and entropy,",
+			"suffix": "grimdark illustration, medieval religious iconography, chaotic composition, textured traditional media feel, ink-smudged edges, heavy contrast, stained parchment ambiance, raw painterly strokes, brutal gothic fantasy mood, IN THE GRIM DARKNESS OF THE FAR FUTURE THERE IS ONLY WAR"},       
+		FAV+"Horror": {
+			"prefix": "gothic horror, dramatic chiaroscuro lighting",
+			"suffix": "heavy shadows, oppressive atmosphere, dark cinematic tone"},    
+		FAV+"Epic-Concept-Art": {
+			"prefix": "cinematic AAA concept art style, sweeping vistas, detailed structures,",
+			"suffix": "heroic composition, atmospheric depth, ultra-polished rendering"},
+
 		"None": {"prefix":"","suffix":""},
 		"Photo": {
 			"prefix": "A cinematic photograph, natural lighting",
@@ -21,6 +48,9 @@ STYLE_PRESETS = {
 		"Greg-Rutkowski-Like": {
 			"prefix": "high-fantasy digital painting with dramatic lighting and richly rendered detail,",
 			"suffix": "epic composition, intricate highlights, atmospheric depth"},    
+        "Blanchitsu-Like":{
+ 			"prefix": "digital illustration, red yellow rust palette, apocalyptic Warhammer chaos aesthetic, scorched orange skies, baroque gothic ornamentation, sketchy chaotic brushwork, dirty parchment tones mixed with blood-red and rust,  skulls and relics, ornate armor, insanity and zealotry, fever-dream battlefield energy, painterly grit and entropy,",
+			"suffix": "grimdark illustration, medieval religious iconography, chaotic composition, textured traditional media feel, ink-smudged edges, heavy contrast, stained parchment ambiance, raw painterly strokes, brutal gothic fantasy mood, IN THE GRIM DARKNESS OF THE FAR FUTURE THERE IS ONLY WAR"},       
         "Dark Painterly Portrait": {
 			"prefix": "moody painterly portrait style, dramatic chiaroscuro lighting, soft shadows,legant classical atmosphere,fine-art photography look, softly blended tones, cinematic depth",
 			"suffix": "atmospheric vignette, soft falloff into darkness, highly sculpted light on the face, rich tonal contrast, refined fine-art mood"},   
@@ -66,9 +96,6 @@ STYLE_PRESETS = {
 		"Pixel Art": {
 			"prefix": "retro pixel art illustration, crisp pixel grid,",
 			"suffix": "limited palette, 8-bit/16-bit aesthetic, nostalgic game style"},
-        "Blanchitsu-Like":{
- 			"prefix": "digital illustration, red yellow rust palette, apocalyptic Warhammer chaos aesthetic, scorched orange skies, baroque gothic ornamentation, sketchy chaotic brushwork, dirty parchment tones mixed with blood-red and rust,  skulls and relics, ornate armor, insanity and zealotry, fever-dream battlefield energy, painterly grit and entropy,",
-			"suffix": "grimdark illustration, medieval religious iconography, chaotic composition, textured traditional media feel, ink-smudged edges, heavy contrast, stained parchment ambiance, raw painterly strokes, brutal gothic fantasy mood, IN THE GRIM DARKNESS OF THE FAR FUTURE THERE IS ONLY WAR"},       
 		"Dark Moebius-Like": {
 			"prefix": "graphic surrealist fantasy with stark linework and eerie dreamlike architecture,",
 			"suffix": "limited palette, angular compositions, uncanny atmospheric tension"},
@@ -247,8 +274,14 @@ STYLE_PRESETS = {
             "suffix": "starfire glow, spectral spell trails, vast magical deep-space haze"
         },
 
-
-
+        "Flooded City":{
+            "prefix": "A shadowy, atmospheric action scene, sulfurous yellows, blood reds, sickly greens. Shapes are chunky and geometric, with almost no gradients. The composition uses extreme contrast and negative space to create dread and mystery, captured from a low, ominous angle that makes every figure loom like a monolith.",
+            "suffix": ""
+        },
+        "Fooded City II":{
+            "prefix":"A shadowy, atmospheric action scene where 80 percent of the image is consumed by solid black ink, broken only by strategic silhouettes and dramatic spot colors. Shapes are chunky and geometric, with almost no gradients. The composition uses extreme contrast and negative space to create dread and mystery, captured from a low, ominous angle that makes every figure loom like a monolith.",
+            "suffix":""
+        }
 }
 
 
