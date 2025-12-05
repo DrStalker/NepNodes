@@ -56,7 +56,7 @@ class NepStylesNoApply:
     CATEGORY="NepNodes"
     OUTPUT_TOOLTIPS = ("the style's prefix","the styles suffix","the name of the chosen style")
 
-    def addStyle(self,style,):
+    def getStyle(self,style,):
         prefix = STYLE_PRESETS[style]["prefix"]  
         suffix = STYLE_PRESETS[style]["suffix"] 
         stylename = style
