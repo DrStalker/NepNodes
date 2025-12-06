@@ -46,9 +46,44 @@ STYLE_PRESETS = {
         WIP+"Flooded City II":{
             "prefix": "most of the image is consumed by solid black ink, broken only by strategic silhouettes and dramatic spot colors digital illustration, A shadowy, atmospheric action scene, baroque gothic ornamentation, sketchy chaotic brushwork, red yellow rust palette, sulfurous yellows, blood reds, sickly greens, limited details in an otherwise black image.  The composition uses extreme negative space to create dread and mystery, captured from a low, ominous angle that makes every figure loom like a monolith. fever-dream battlefield energy, black skies, black background, extreme vignetting ",
             "suffix": "painterly grit and entropy  chaotic composition, textured traditional media feel, ink-smudged edges, raw painterly strokes, brutal gothic fantasy mood,"        },
-        WIP+"Lovecraftian": {
-            "prefix": "lovecraftian horror",
-            "suffix": "eldritch, cosmic horror, unknown, mysterious, surreal, highly detailed"        },   
+       WIP + "Casual Mobile Photo": {
+        "prefix": "# File Details\n * filename: DSC1000.JPG\n * source:  old Android phone\n\n# Photograph Details\n * Color  : vibrant\n * Style  : casual and amateur\n * Content: \n", "suffix": "\n"},
+
+      WIP + "Vintage Candid Photo": {
+        "prefix": "A gritty, candid vintage photograph from a disposable camera, dark shadows and vibrant warm colors, featuring: ", "suffix": ""},
+
+      WIP + "Classic Film Photo": {
+        "prefix": "A cinematic shot from a classic film with deep black shadows and warm earth tones. The film grain is visible. The scene, imbued with profound emotion, depicts: ", "suffix": ""},
+
+      WIP + "Lo-fi Mobile Photo": {
+        "prefix": "A raw documentary photograph taken with an old Android phone. This casual, low quality, amateur shot showcases ", "suffix": ""},
+
+      WIP + "B&W Darkroom": {
+        "prefix": "A chiaroscuro darkroom, black and white high contrast, grainy photo with wide-angle vision, and vignette effect. This casual photo showcases: ", "suffix": "\n"},
+
+      WIP + "Cyberpunk Neon": {
+        "prefix": "Black cyberpunk landscape photograph with dark atmosphere and glowing neon lights with satured colors, featuring ", "suffix": ""},
+
+      WIP + "Retro Pixel Art": {
+        "prefix": "A detailed retro pixel art illustration in the style of Commodore 64 graphics, featuring ", "suffix": "Chunky, low-resolution details, often with dithering techniques"},
+
+      WIP + "Simple Vector Illustration": {
+        "prefix": "A stylized digital illustration with a graphic design aesthetic, featuring flat, solid colors, no defined outlines, and a minimalist approach to composition, featuring: . ", "suffix": "Iconography style."},
+
+      WIP + "Vintage Comic Panel": {
+        "prefix": "An old sheet of paper with a vintage erotic comic strip from 1950 painted in white, red, blue and black with freehand outlines, a detailed and dirty image featuring: ", "suffix": ""},
+
+      WIP + "Studio Anime": {
+        "prefix": "Epic anime filmed by Studio Ghibli, Japanese animation and hand-painted, depicts: ", "suffix": ""},
+
+      WIP + "Minimalist Sketchwash": {
+        "prefix": "A minimalist pencil sketch and watercolor painting, rendered with rough drawing style and pastel colors on a white background, featuring: . ", "suffix": ""},
+
+      WIP + "Dark Anime": {
+        "prefix": "Dark fantasy masterpiece of cel_shading, with detailed anime violent style, featuring: .", "suffix": ""},
+
+      WIP + "Vintage EGA Monitor": {
+        "prefix": "Photo of an old monitor displaying a EGA game for DOS. The monitor is on a wooden table, and light from a window is reflecting off the screen. The image has scanlines. The game features a retro pixel art design in 16-color EGA, with thick, low-resolution pixels.\n\nThe pixel-art illustration on the monitor includes all of the following:\n<begin>\n", "suffix": "\n<end>\n"},
 
 
 		PHOTO+"Photo": {

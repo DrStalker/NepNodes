@@ -9,7 +9,7 @@
 import math
 import re
 import sys
-
+import os
 
 #---------------------------------------------------------------------------------------------------------------------------------------------------#
 
@@ -317,7 +317,7 @@ class NepTooManyInputs:
     RETURN_TYPES = ("BOOL",)
     RETURN_NAMES = ("result",)
     FUNCTION = "compute"
-    CATEGORY = "Logic"
+    CATEGORY = "NepNodes"
 
     def compute(self, value1, value2, value3, value4, threshold):
         # Count how many inputs are NOT None
@@ -342,7 +342,7 @@ class NepPrintStringIfTrue:
     RETURN_TYPES = ("STRING",)
     RETURN_NAMES = ("text_out",)
     FUNCTION = "run"
-    CATEGORY = "Debug"
+    CATEGORY = "NepNodes"
 
     def run(self, trigger, text):
         if trigger:
@@ -354,7 +354,25 @@ class NepPrintStringIfTrue:
         return (text,)
  
 #---------------------------------------------------------------------------------------------------------------------------------------------------
-#class NepPipeOut
+class NepStripFileExtension:
+
+    @classmethod
+    def INPUT_TYPES(cls):
+        return {
+            "required": {
+                "filename": ("STRING", {"default": ""})
+            }
+        }
+
+    RETURN_TYPES = ("STRING",)
+    RETURN_NAMES = ("basename",)
+    FUNCTION = "strip_ext"
+    CATEGORY = "NepNodes"
+
+    def strip_ext(self, filename):
+        # Extract file name without extension
+        base = os.path.splitext(filename)[0]
+        return (base,)
  
 #---------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -379,6 +397,7 @@ NODE_CLASS_MAPPINGS = {
     "NepSwitchOneIntOnBool": NepSwitchOneIntOnBool,
     "NepTooManyInputs": NepTooManyInputs,
     "NepPrintStringIfTrue": NepPrintStringIfTrue,
+    "NepStripFileExtension": NepStripFileExtension,
 }
 
 NODE_DISPLAY_NAME_MAPPINGS = {
@@ -392,4 +411,5 @@ NODE_DISPLAY_NAME_MAPPINGS = {
     "NepSwitchOneIntOnBool": "Simple Int Switch (NEP)",
     "NepTooManyInputs": "Nep Too Many Inputs (NEP)",
     "NepPrintStringIfTrue": "Print String If True (NEP)",
+    "NepStripFileExtension": "Strip File Extension (NEP)"
 }
