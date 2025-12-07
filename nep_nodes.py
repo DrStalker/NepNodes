@@ -402,6 +402,11 @@ class RegexReplace:
 
 
 class NepRegexReplace:
+    """
+    returns re.sub(pattern, replacement, text)
+    no being helpful, no screwing around with the output, just a simple and effective regular expession node.
+    Provided you know how to write the expression you need.
+    """
 
     @classmethod
     def INPUT_TYPES(cls):
