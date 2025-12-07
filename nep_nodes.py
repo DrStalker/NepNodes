@@ -375,6 +375,92 @@ class NepStripFileExtension:
         return (base,)
  
 #---------------------------------------------------------------------------------------------------------------------------------------------------
+class RegexReplace:
+
+    @classmethod
+    def INPUT_TYPES(cls):
+        return {
+            "required": {
+                "text": ("STRING", {"default": "", "multiline": True}),
+                "pattern": ("STRING", {"default": ""}),
+                "replacement": ("STRING", {"default": ""}),
+            }
+        }
+
+    RETURN_TYPES = ("STRING",)
+    RETURN_NAMES = ("result",)
+    FUNCTION = "apply_regex"
+    CATEGORY = "NepNodes"
+
+    def apply_regex(self, text, pattern, replacement):
+        try:
+            output = re.sub(pattern, replacement, text)
+        except re.error as e:
+            output = f"[REGEX ERROR] {e}"
+        return (output,)
+#---------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+class NepRegexReplace:
+
+    @classmethod
+    def INPUT_TYPES(cls):
+        return {
+            "required": {
+                "text": ("STRING", {"default": "", "multiline": True}),
+                "pattern": ("STRING", {"default": ""}),
+                "replacement": ("STRING", {"default": ""}),
+            }
+        }
+
+    RETURN_TYPES = ("STRING",)
+    RETURN_NAMES = ("result",)
+    FUNCTION = "apply_regex"
+    CATEGORY = "NepNodes"
+
+    def apply_regex(self, text, pattern, replacement):
+        try:
+            output = re.sub(pattern, replacement, text)
+        except re.error as e:
+            output = f"[REGEX ERROR] {e}"
+        return (output,)
+
+
+#---------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+#---------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+#---------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+#---------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+#---------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+#---------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+#---------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+#---------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+#---------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+#---------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+#---------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+#---------------------------------------------------------------------------------------------------------------------------------------------------
+
 
 #---------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -398,9 +484,11 @@ NODE_CLASS_MAPPINGS = {
     "NepTooManyInputs": NepTooManyInputs,
     "NepPrintStringIfTrue": NepPrintStringIfTrue,
     "NepStripFileExtension": NepStripFileExtension,
+    "NepRegexReplace": NepRegexReplace,
 }
 
 NODE_DISPLAY_NAME_MAPPINGS = {
+
     "NepXOR_INT_INT": "XOR (Nep)",
     "NepRemoveFirstOrLastImageFromBatch": "Remove First or Last From Batch (NEP)",
     "NepRatioResolution": "Resolution from Ratio (NEP)",
@@ -411,5 +499,6 @@ NODE_DISPLAY_NAME_MAPPINGS = {
     "NepSwitchOneIntOnBool": "Simple Int Switch (NEP)",
     "NepTooManyInputs": "Nep Too Many Inputs (NEP)",
     "NepPrintStringIfTrue": "Print String If True (NEP)",
-    "NepStripFileExtension": "Strip File Extension (NEP)"
+    "NepStripFileExtension": "Strip File Extension (NEP)",
+    "NepRegexReplace": "Regex Replace (Nep)",
 }

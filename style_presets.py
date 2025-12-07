@@ -80,7 +80,7 @@ STYLE_PRESETS = {
         "prefix": "A minimalist pencil sketch and watercolor painting, rendered with rough drawing style and pastel colors on a white background, featuring: . ", "suffix": ""},
 
       WIP + "Dark Anime": {
-        "prefix": "Dark fantasy masterpiece of cel_shading, with detailed anime violent style, featuring: .", "suffix": ""},
+        "prefix": "Dark fantasy masterpiece of cel_shading, with detailed anime violent style, featuring: ", "suffix": ""},
 
       WIP + "Vintage EGA Monitor": {
         "prefix": "Photo of an old monitor displaying a EGA game for DOS. The monitor is on a wooden table, and light from a window is reflecting off the screen. The image has scanlines. The game features a retro pixel art design in 16-color EGA, with thick, low-resolution pixels.\n\nThe pixel-art illustration on the monitor includes all of the following:\n<begin>\n", "suffix": "\n<end>\n"},
