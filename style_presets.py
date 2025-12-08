@@ -30,7 +30,7 @@ STYLE_PRESETS = {
 		FAV+"Digital Art Vibrant": {
 			"prefix": "a highly detailed digital artwork, vibrant color grading, smooth shading, high contrast, cinematic contrast, semi-illustrated, semi-realistic",
 			"suffix": ""},
-        FAV + "Digital Art Dramatic":{"prefix": "dramatic chiaroscuro lighting",
+        FAV + "Digital Art Dramatic":{"prefix": "digital painting, dramatic chiaroscuro lighting",
             "suffix": "heavy shadows, oppressive atmosphere,"},                
 
 		FAV+"Greg-Rutkowski-Like": {
@@ -45,22 +45,28 @@ STYLE_PRESETS = {
         FAV+"Flooded City II":{
             "prefix": "most of the image is consumed by solid black ink, broken only by strategic silhouettes and dramatic spot colors digital illustration, A shadowy, atmospheric action scene, baroque gothic ornamentation, sketchy chaotic brushwork, red yellow rust palette, sulfurous yellows, blood reds, sickly greens, limited details in an otherwise black image.  The composition uses extreme negative space to create dread and mystery, captured from a low, ominous angle that makes every figure loom like a monolith. fever-dream battlefield energy, black skies, black background, extreme vignetting ",
             "suffix": "painterly grit and entropy  chaotic composition, textured traditional media feel, ink-smudged edges, raw painterly strokes, brutal gothic fantasy mood,"        },
-
+        FAV + "horror sketch":{"prefix": "chaotic, punk-horror, ink-splatter illustration with rough, high-contrast black lines",
+            "suffix": ""},    
 
     # ------------------------------------------------------------------------------------
                
 
-        WIP + "horror sketch":{"prefix": "chaotic, punk-horror, ink-splatter illustration with rough, high-contrast black lines",
-            "suffix": ""},                   
-      WIP + "B&W Darkroom": { # from https://civitai.com/models/2181458/amazing-z-image-workflow
-        "prefix": "A chiaroscuro darkroom, black and white high contrast, grainy photo with wide-angle vision, and vignette effect. This casual photo showcases: ", "suffix": "\n"},
-
-      WIP + "Dark Anime": { # from https://civitai.com/models/2181458/amazing-z-image-workflow
-        "prefix": "Dark fantasy masterpiece of cel_shading, with detailed anime violent style, featuring: ", "suffix": ""},
+        WIP + "Cyberpunk Anime":{
+        "prefix": "Cyberpunk Mecha Anime Style (Shirow Masamune/Katsuhiro Otomo influence, reminiscent of Ghost in the Shell or Akira), ",
+        "suffix": "Cool, stark color palette dominated by deep blues, navy, and black in the background and shadows, strongly contrast between background and subjects"},                   
+        WIP + "Scribble Art": {
+			"prefix": "(Loose spontaneous linework, continuous overlapping strokes, chaotic energetic contours, sketchy hand-drawn texture, abstract or semi-representational forms, ",
+			"suffix": "dynamic movement, visible pressure variation, raw expressive mark-making with no clean outlines) "      },           
+        WIP + "Cel shaded":{ 
+            "prefix": "A stylized digital illustration in comic line art style, rendered with professional, sleek, modern precision through vector graphics and graphic novel aesthetics. Employ a minimalist palette dominated by deep, enveloping shadows and negative space to evoke enigmatic stillness and cinematic tension, contrasted by saturated, vibrant highlights",
+            "suffix": "faint red edge-lighting grazing contours, intense glowing accents piercing the darkness, and subtle glints of reflection along sharp, clean thick lines. Build quiet suspense with highly detailed yet restrained compositions, emphasizing stark contrasts between obscurity and luminous presence for a vibrant, graphic, and immersive visual impact."},
+        WIP + "B&W Darkroom": { # from https://civitai.com/models/2181458/amazing-z-image-workflow
+            "prefix": "A chiaroscuro darkroom, black and white high contrast, grainy photo with wide-angle vision, and vignette effect. This casual photo showcases: ", "suffix": "\n"},
+        WIP + "Dark Anime": { # from https://civitai.com/models/2181458/amazing-z-image-workflow
+            "prefix": "Dark fantasy masterpiece of cel_shading, with detailed anime violent style, featuring: ", "suffix": ""},
         WIP+"Ansel Adams Portrait": {
             "prefix": "high-contrast black and white fine-art portrait photography, deep rich tonal range, precise zone-system exposure, crisp micro-detail, soft diffused key lighting, classic medium-format look, sculpted highlights and deep shadows, clean minimalist backdrop,",
-            "suffix": "timeless fine-art realism, carefully controlled light and form, natural expression, strong textural definition, dramatic chiaroscuro, pure monochrome aesthetic, refined tonal control, gallery-quality portraiture"
-        },            
+            "suffix": "timeless fine-art realism, carefully controlled light and form, natural expression, strong textural definition, dramatic chiaroscuro, pure monochrome aesthetic, refined tonal control, gallery-quality portraiture"        },            
 
     # ------------------------------------------------------------------------------------
 		PHOTO+"Medium Format": {
