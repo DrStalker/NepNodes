@@ -16,18 +16,23 @@ STYLE_PRESETS = {
    
     # ------------------------------------------------------------------------------------
 		"None": {"prefix":"","suffix":""}, #Keep this at the top so it's easy to turn off. Or maybe add a boolean to enable?
-		FAV+"Medium Format": {
-			"prefix": "medium-format film photograph, movie-still aesthetic", 
-			"suffix": "cinematic lighting and rim lighting, soft film grain, shallow depth of field, soft film grain and Kodak Portra tones."},
     # ------------------------------------------------------------------------------------
+		FAV+"Photo": {
+			"prefix": "A cinematic photograph, natural lighting",
+			"suffix": "high contrast, professional photo, sharp focus"},    
       FAV + "Classic Film Photo": {
         "prefix": "A cinematic shot from a classic film with deep black shadows and warm earth tones. The film grain is visible. The scene, imbued with profound emotion, depicts: ", "suffix": ""},
 		FAV+"Horror": {
 			"prefix": "gothic horror, dramatic chiaroscuro lighting",
 			"suffix": "heavy shadows, oppressive atmosphere, dark cinematic tone"},    
+        FAV + "Horror Lite":{"prefix": "dramatic chiaroscuro lighting",
+            "suffix": "heavy shadows, oppressive atmosphere,"},                
 		FAV+"Digital Art Vibrant": {
 			"prefix": "a highly detailed digital artwork, vibrant color grading, smooth shading, high contrast, cinematic contrast, semi-illustrated, semi-realistic",
 			"suffix": ""},
+        FAV + "Digital Art Dramatic":{"prefix": "dramatic chiaroscuro lighting",
+            "suffix": "heavy shadows, oppressive atmosphere,"},                
+
 		FAV+"Greg-Rutkowski-Like": {
 			"prefix": "high-fantasy digital painting with dramatic lighting and richly rendered detail,",
 			"suffix": "epic composition, intricate highlights, atmospheric depth"},    
@@ -43,6 +48,8 @@ STYLE_PRESETS = {
 
 
     # ------------------------------------------------------------------------------------
+               
+
         WIP + "horror sketch":{"prefix": "chaotic, punk-horror, ink-splatter illustration with rough, high-contrast black lines",
             "suffix": ""},                   
       WIP + "B&W Darkroom": { # from https://civitai.com/models/2181458/amazing-z-image-workflow
@@ -56,9 +63,10 @@ STYLE_PRESETS = {
         },            
 
     # ------------------------------------------------------------------------------------
-		PHOTO+"Photo": {
-			"prefix": "A cinematic photograph, natural lighting",
-			"suffix": "high contrast, professional photo, sharp focus"},        
+		PHOTO+"Medium Format": {
+			"prefix": "medium-format film photograph, movie-still aesthetic", 
+			"suffix": "cinematic lighting and rim lighting, soft film grain, shallow depth of field, soft film grain and Kodak Portra tones."},
+    
         PHOTO+"Analog Photo": {
             "prefix": "analogue film photograph, grainy texture, soft contrast, warm tonal shifts,slight vignette, subtle chromatic aberration, shallow depth of field, vintage color palette,natural imperfections",
 			"suffix": "captured on vintage film stock, gentle film grain, organic light falloff,faded highlights, muted shadows"},   
@@ -112,7 +120,7 @@ STYLE_PRESETS = {
      # ------------------------------------------------------------------------------------
        
       ANIME + "Studio Anime": { # from https://civitai.com/models/2181458/amazing-z-image-workflow
-        "prefix": "Epic anime filmed by Studio Ghibli, Japanese animation and hand-painted, depicts: ", "suffix": ""},
+        "prefix": "Epic anime filmed by Studio Ghibli, Japanese animation and hand-painted", "suffix": ""},
 		ANIME+"90s-Anime-OVA": {
 			"prefix": "1990s OVA anime aesthetic, sharp cel outlines, retro color palette,",
 			"suffix": "grainy film texture, dramatic highlights, nostalgic shading style"},
