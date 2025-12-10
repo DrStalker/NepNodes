@@ -49,6 +49,9 @@ STYLE_PRESETS = {
             "suffix": ""},    
 
     # ------------------------------------------------------------------------------------
+        WIP+"Blanchitsu-Lite":{
+ 			"prefix": "digital illustration, red yellow rust palette, apocalyptic chaos aesthetic, scorched orange skies, baroque gothic ornamentation, sketchy chaotic brushwork, dirty parchment tones mixed with blood-red and rust,  skulls ornamentation,insanity and zealotry, fever-dream battlefield energy, painterly grit and entropy,",
+			"suffix": "grimdark illustration, religious iconography ornamentation, chaotic composition, textured traditional media feel, ink-smudged edges, heavy contrast, stained parchment ambiance, raw painterly strokes, brutal gothic fantasy mood"},       
                
 
         WIP + "Cyberpunk Anime":{
@@ -57,6 +60,8 @@ STYLE_PRESETS = {
         WIP + "Scribble Art": {
 			"prefix": "(Loose spontaneous linework, continuous overlapping strokes, chaotic energetic contours, sketchy hand-drawn texture, abstract or semi-representational forms, ",
 			"suffix": "dynamic movement, visible pressure variation, raw expressive mark-making with no clean outlines) "      },           
+
+
         WIP + "Cel shaded":{ 
             "prefix": "A stylized digital illustration in comic line art style, rendered with professional, sleek, modern precision through vector graphics and graphic novel aesthetics. Employ a minimalist palette dominated by deep, enveloping shadows and negative space to evoke enigmatic stillness and cinematic tension, contrasted by saturated, vibrant highlights",
             "suffix": "faint red edge-lighting grazing contours, intense glowing accents piercing the darkness, and subtle glints of reflection along sharp, clean thick lines. Build quiet suspense with highly detailed yet restrained compositions, emphasizing stark contrasts between obscurity and luminous presence for a vibrant, graphic, and immersive visual impact."},
@@ -67,6 +72,10 @@ STYLE_PRESETS = {
         WIP+"Ansel Adams Portrait": {
             "prefix": "high-contrast black and white fine-art portrait photography, deep rich tonal range, precise zone-system exposure, crisp micro-detail, soft diffused key lighting, classic medium-format look, sculpted highlights and deep shadows, clean minimalist backdrop,",
             "suffix": "timeless fine-art realism, carefully controlled light and form, natural expression, strong textural definition, dramatic chiaroscuro, pure monochrome aesthetic, refined tonal control, gallery-quality portraiture"        },            
+
+        # TO DO:
+        # Oil paintings: https://www.reddit.com/r/StableDiffusion/comments/1phkr5i/zimage_feels_really_good_like_inpainting_with/
+        
 
     # ------------------------------------------------------------------------------------
 		PHOTO+"Medium Format": {

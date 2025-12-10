@@ -73,8 +73,8 @@ class NepRatioResolution:
                 "megapixels": ("FLOAT", {"default": 1,"min":0.01,"max":100}),
             }
         }
-    RETURN_TYPES = ("INT","INT","FLOAT")
-    RETURN_NAMES = ("width", "height", "ratio")
+    RETURN_TYPES = ("INT","INT","FLOAT","FLOAT")
+    RETURN_NAMES = ("width", "height", "ratio", "megapixels")
     FUNCTION = "get_resolutions_from_ratio"
 
     CATEGORY="NepNodes"
@@ -114,7 +114,7 @@ class NepRatioResolution:
             if height > width:
                 width, height = height, width
         #print("width:", width, "height:",height,)
-        return(width, height, rationum)
+        return(width, height, rationum, megapixels)
 
 #---------------------------------------------------------------------------------------------------------------------------------------------------#
 
