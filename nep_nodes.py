@@ -59,7 +59,7 @@ class NepWanResolutions:
 
 
 class NepRatioResolution:
-    ratio = ["1:1", "5:4", "4:3", "3:2", "16:10","16:9","2:1","21:9"]
+    ratio = ["1:1", "5:4", "4:3", "3:2", "16:10","16:9","2:1","US Letter", "A4", "Force 1080p", "Force 2k"]
     orientation = ["portrait", "landscape"]
     def __init__(self):
         pass
@@ -70,7 +70,7 @@ class NepRatioResolution:
             "required": {
                 "ratio": (s.ratio,),
                 "orientation": (s.orientation,),
-                "megapixels": ("FLOAT", {"default": 1,"min":0.01,"max":100}),
+                "megapixels": ("FLOAT", {"default": 1,"min":0.1,"max":100}),
             }
         }
     RETURN_TYPES = ("INT","INT","FLOAT","FLOAT")
@@ -79,8 +79,8 @@ class NepRatioResolution:
 
     CATEGORY="NepNodes"
     def get_resolutions_from_ratio(self,ratio,megapixels,orientation):
-        #print("ratio:",ratio,"megapixels:",megapixels,"orientation:",orientation)
-
+        
+        megapixelsout=megapixels
         rationum = float(1) # fallback to 1 if things break weirdly
         if(ratio == "5:4"): 
             rationum = float(5/4)        
@@ -96,6 +96,10 @@ class NepRatioResolution:
             rationum = float(2)
         elif(ratio == "21:9"): 
             rationum = float(21/9)
+        elif(ratio == "US Letter"): 
+            rationum = float(11/8.5)
+        elif(ratio == "A4"): 
+            rationum = float(297/210)
 
         total_pixels = megapixels * 1024 * 1024
         width = math.sqrt(total_pixels * rationum)
@@ -105,7 +109,13 @@ class NepRatioResolution:
         def round4(x):
             return int(round(x / 4) * 4)        
         width = round16(width)    # Z-Image likes multiples of 16, I think.
-        height = round16(height)  #
+        height = round16(height)  
+        if(ratio == "Force 1080p"): 
+            width, height = 1920, 1080 # 1080 is not divisible  by 16, so might cause issues?  
+            megapixelsout = (1920 * 1080) / (1024 * 1024) # 1.98
+        elif(ratio == "Force 2k"): 
+            width, height = 2560, 1440
+            megapixelsout = (2560 * 1440) / (1024 * 1024) # 3.52
 
         if orientation  == "portrait":
             if width > height:
@@ -113,8 +123,8 @@ class NepRatioResolution:
         else:
             if height > width:
                 width, height = height, width
-        #print("width:", width, "height:",height,)
-        return(width, height, rationum, megapixels)
+
+        return(width, height, rationum, megapixelsout)
 
 #---------------------------------------------------------------------------------------------------------------------------------------------------#
 
