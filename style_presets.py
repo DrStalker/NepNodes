@@ -52,7 +52,7 @@ STYLE_PRESETS = {
         WIP+"Blanchitsu-Lite":{
  			"prefix": "digital illustration, red yellow rust palette, apocalyptic chaos aesthetic, scorched orange skies, baroque gothic ornamentation, sketchy chaotic brushwork, dirty parchment tones mixed with blood-red and rust,  skulls ornamentation,insanity and zealotry, fever-dream battlefield energy, painterly grit and entropy,",
 			"suffix": "grimdark illustration, religious iconography ornamentation, chaotic composition, textured traditional media feel, ink-smudged edges, heavy contrast, stained parchment ambiance, raw painterly strokes, brutal gothic fantasy mood"},       
-               
+
 
         WIP + "Cyberpunk Anime":{
         "prefix": "Cyberpunk Mecha Anime Style (Shirow Masamune/Katsuhiro Otomo influence, reminiscent of Ghost in the Shell or Akira), ",
@@ -60,7 +60,6 @@ STYLE_PRESETS = {
         WIP + "Scribble Art": {
 			"prefix": "(Loose spontaneous linework, continuous overlapping strokes, chaotic energetic contours, sketchy hand-drawn texture, abstract or semi-representational forms, ",
 			"suffix": "dynamic movement, visible pressure variation, raw expressive mark-making with no clean outlines) "      },           
-
 
         WIP + "Cel shaded":{ 
             "prefix": "A stylized digital illustration in comic line art style, rendered with professional, sleek, modern precision through vector graphics and graphic novel aesthetics. Employ a minimalist palette dominated by deep, enveloping shadows and negative space to evoke enigmatic stillness and cinematic tension, contrasted by saturated, vibrant highlights",
@@ -78,7 +77,10 @@ STYLE_PRESETS = {
         
 
     # ------------------------------------------------------------------------------------
-		PHOTO+"Medium Format": {
+	        PHOTO+"Illford Delta 3200":{
+            "prefix":"A black-and-white analog aged photograph",
+            "suffix":"Illford Delta 3200 film, , push processing, film grain, high contrast, deep shadows and blown out highlights"},
+    	PHOTO+"Medium Format": {
 			"prefix": "medium-format film photograph, movie-still aesthetic", 
 			"suffix": "cinematic lighting and rim lighting, soft film grain, shallow depth of field, soft film grain and Kodak Portra tones."},
     
