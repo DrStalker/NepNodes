@@ -36,9 +36,6 @@ STYLE_PRESETS = {
 		FAV+"Greg-Rutkowski-Like": {
 			"prefix": "high-fantasy digital painting with dramatic lighting and richly rendered detail,",
 			"suffix": "epic composition, intricate highlights, atmospheric depth"},    
-        FAV+"Blanchitsu-Like":{
- 			"prefix": "digital illustration, red yellow rust palette, apocalyptic Warhammer chaos aesthetic, scorched orange skies, baroque gothic ornamentation, sketchy chaotic brushwork, dirty parchment tones mixed with blood-red and rust,  skulls and relics, ornate armor, insanity and zealotry, fever-dream battlefield energy, painterly grit and entropy,",
-			"suffix": "grimdark illustration, medieval religious iconography, chaotic composition, textured traditional media feel, ink-smudged edges, heavy contrast, stained parchment ambiance, raw painterly strokes, brutal gothic fantasy mood, IN THE GRIM DARKNESS OF THE FAR FUTURE THERE IS ONLY WAR"},       
         FAV+"Flooded City":{
             "prefix": "digital illustration, A shadowy, atmospheric action scene, baroque gothic ornamentation, sketchy chaotic brushwork, red yellow rust palette, sulfurous yellows, blood reds, sickly greens, dark oppressive skies.  The composition uses extreme contrast and negative space to create dread and mystery, captured from a low, ominous angle that makes every figure loom like a monolith. fever-dream battlefield energy, ",
             "suffix": "Vingetting in the corners,  painterly grit and entropy  chaotic composition, textured traditional media feel, ink-smudged edges, raw painterly strokes, brutal gothic fantasy mood,"        },
@@ -47,6 +44,9 @@ STYLE_PRESETS = {
             "suffix": "painterly grit and entropy  chaotic composition, textured traditional media feel, ink-smudged edges, raw painterly strokes, brutal gothic fantasy mood,"        },
         FAV + "horror sketch":{"prefix": "chaotic, punk-horror, ink-splatter illustration with rough, high-contrast black lines",
             "suffix": ""},    
+        FAV + "Scribble Art": {
+			"prefix": "(Loose spontaneous linework, continuous overlapping strokes, chaotic energetic contours, sketchy hand-drawn texture, abstract or semi-representational forms, ",
+			"suffix": "dynamic movement, visible pressure variation, raw expressive mark-making with no clean outlines) "      },           
 
     # ------------------------------------------------------------------------------------
         WIP+"Blanchitsu-Lite":{
@@ -57,27 +57,41 @@ STYLE_PRESETS = {
         WIP + "Cyberpunk Anime":{
         "prefix": "Cyberpunk Mecha Anime Style (Shirow Masamune/Katsuhiro Otomo influence, reminiscent of Ghost in the Shell or Akira), ",
         "suffix": "Cool, stark color palette dominated by deep blues, navy, and black in the background and shadows, strongly contrast between background and subjects"},                   
-        WIP + "Scribble Art": {
-			"prefix": "(Loose spontaneous linework, continuous overlapping strokes, chaotic energetic contours, sketchy hand-drawn texture, abstract or semi-representational forms, ",
-			"suffix": "dynamic movement, visible pressure variation, raw expressive mark-making with no clean outlines) "      },           
-
+		WIP+"Cyberpunk anime II": {
+		    "prefix": "anime, outlines, digital illustration, cyberpunk noir aesthetic, high-contrast teal-and-amber lighting, sharp graphic linework, metallic texture detailing, cinematic depth",
+		    "suffix": "Lighting contrast divides the scene: teal one one side, amber on the other, both defining edges of clothing, plastic surfaces, dramatic dual-color lighting."},
+		WIP+"Flash Photo": {
+		    "prefix": "visible skin texture and micro-details, pronounced pore detail, minimal light diffusion, compact camera flash aesthetic, late 2000s to early 2010s digital photo style, ",
+		    "suffix": "cool-to-neutral white balance, moderate digital noise in shadow areas, flat background separation, no cinematic grading, raw unfiltered realism, documentary snapshot look, true-to-life color but with flash-driven saturation, unsoftened texture."},
+		WIP+"Polaroid": {
+		    "prefix": "polaroid photo, light-leaking Polaroid filter,",
+		    "suffix": "Kodak Portra 400 look, subtle grain, vignette, warm-cool contrast, intimate cinematic portrait"},
+		WIP+"Chiaroscuro Fantasy Sketch": {
+		    "prefix": "Chiaroscuro Fantasy Sketch, extreme photorealistic style,  Rendered in bold, expressive pop-art style with halftone textures,",
+		    "suffix": "low contrast, masterpiece, best quality, absurdres, highres, perfect anatomy, 8k wallpaper, ultra high quality, extremely detailed cg, perfect lighting, (sharp image) illustration),"},
+		WIP+"wet plate collodion portrait": {
+		    "prefix": "wet plate collodion portrait, ultra-deep blacks, extreme high contrast, large-format tintype look, razor micro-detail, dramatic silver-gelatin tones, harsh falloff, soft halation, organic chemical artifacts, oxidized plate edges",
+		    "suffix": "intense monochrome depth, crushed shadows, bright metallic highlights, chemical streaks, plate imperfections, plate streaking, historical analog texture, vintage chemical imperfections"},
+		WIP+"Photo-oil": {
+		    "prefix": "",
+		    "suffix": "The photograph is rendered as oil painting on canvas with heavy brush strokes and deep rich colors, 50mm lens, cinematic style reminiscent of Tim Burton's dark fantasy aesthetic. High-resolution detailing captures the gritty texture of the metal machinery and the intricacies in fabric textures while maintaining a dreamlike quality to evoke nostalgia for days long past."},
+		WIP+"Hasselblad X2D": {
+		    "prefix": "Masterpiece photograph using a Hasselblad X2D II 100C, depth of field, subsurface scattering, and perfect, cinematic, volumetric lighting.",
+		    "suffix": "Rich detail, textured fabrics, expressive faces, warm natural lighting, cinematic realism, subtle depth of field, high-resolution digital art"},
         WIP + "Cel shaded":{ 
             "prefix": "A stylized digital illustration in comic line art style, rendered with professional, sleek, modern precision through vector graphics and graphic novel aesthetics. Employ a minimalist palette dominated by deep, enveloping shadows and negative space to evoke enigmatic stillness and cinematic tension, contrasted by saturated, vibrant highlights",
             "suffix": "faint red edge-lighting grazing contours, intense glowing accents piercing the darkness, and subtle glints of reflection along sharp, clean thick lines. Build quiet suspense with highly detailed yet restrained compositions, emphasizing stark contrasts between obscurity and luminous presence for a vibrant, graphic, and immersive visual impact."},
-        WIP + "B&W Darkroom": { # from https://civitai.com/models/2181458/amazing-z-image-workflow
-            "prefix": "A chiaroscuro darkroom, black and white high contrast, grainy photo with wide-angle vision, and vignette effect. This casual photo showcases: ", "suffix": "\n"},
-        WIP + "Dark Anime": { # from https://civitai.com/models/2181458/amazing-z-image-workflow
-            "prefix": "Dark fantasy masterpiece of cel_shading, with detailed anime violent style, featuring: ", "suffix": ""},
         WIP+"Ansel Adams Portrait": {
             "prefix": "high-contrast black and white fine-art portrait photography, deep rich tonal range, precise zone-system exposure, crisp micro-detail, soft diffused key lighting, classic medium-format look, sculpted highlights and deep shadows, clean minimalist backdrop,",
             "suffix": "timeless fine-art realism, carefully controlled light and form, natural expression, strong textural definition, dramatic chiaroscuro, pure monochrome aesthetic, refined tonal control, gallery-quality portraiture"        },            
+
 
         # TO DO:
         # Oil paintings: https://www.reddit.com/r/StableDiffusion/comments/1phkr5i/zimage_feels_really_good_like_inpainting_with/
         
 
     # ------------------------------------------------------------------------------------
-	        PHOTO+"Illford Delta 3200":{
+	    PHOTO+"Illford Delta 3200":{
             "prefix":"A black-and-white analog aged photograph",
             "suffix":"Illford Delta 3200 film, , push processing, film grain, high contrast, deep shadows and blown out highlights"},
     	PHOTO+"Medium Format": {
@@ -110,7 +124,7 @@ STYLE_PRESETS = {
 		ART+"Epic-Concept-Art": {
 			"prefix": "cinematic AAA concept art style, sweeping vistas, detailed structures,",
 			"suffix": "heroic composition, atmospheric depth, ultra-polished rendering"},              
-        ARTIST+"Grim Baroque Engraving": {
+        ART+"Grim Baroque Engraving": {
             "prefix": "grimdark gothic fantasy aesthetic, scratchy ink textures, baroque cluttered details, medieval surrealism,",
             "suffix": "bleak palette, chaotic linework, decayed ornate motifs, brutal fantastical symbolism, antique occult atmosphere"        },         
 		ART+"Victorian Storybook": {
@@ -136,8 +150,10 @@ STYLE_PRESETS = {
             "suffix": "vibrant, beautiful, painterly, detailed, textural, artistic"        },                
      # ------------------------------------------------------------------------------------
        
-      ANIME + "Studio Anime": { # from https://civitai.com/models/2181458/amazing-z-image-workflow
+        ANIME + "Studio Anime": { # from https://civitai.com/models/2181458/amazing-z-image-workflow
         "prefix": "Epic anime filmed by Studio Ghibli, Japanese animation and hand-painted", "suffix": ""},
+        ANIME + "Dark Anime": { # from https://civitai.com/models/2181458/amazing-z-image-workflow
+            "prefix": "Dark fantasy masterpiece of cel_shading, with detailed anime violent style, featuring: ", "suffix": ""},
 		ANIME+"90s-Anime-OVA": {
 			"prefix": "1990s OVA anime aesthetic, sharp cel outlines, retro color palette,",
 			"suffix": "grainy film texture, dramatic highlights, nostalgic shading style"},
@@ -149,7 +165,9 @@ STYLE_PRESETS = {
 			"suffix": "chromatic bleeding, scanlines, tape noise artifacts"},	
 
     # ------------------------------------------------------------------------------------
-
+        ARTIST+"Blanchitsu-Like":{
+ 			"prefix": "digital illustration, red yellow rust palette, apocalyptic Warhammer chaos aesthetic, scorched orange skies, baroque gothic ornamentation, sketchy chaotic brushwork, dirty parchment tones mixed with blood-red and rust,  skulls and relics, ornate armor, insanity and zealotry, fever-dream battlefield energy, painterly grit and entropy,",
+			"suffix": "grimdark illustration, medieval religious iconography, chaotic composition, textured traditional media feel, ink-smudged edges, heavy contrast, stained parchment ambiance, raw painterly strokes, brutal gothic fantasy mood, IN THE GRIM DARKNESS OF THE FAR FUTURE THERE IS ONLY WAR"},       
 		ARTIST+"Dark Moebius-Like": {
 			"prefix": "graphic surrealist fantasy with stark linework and eerie dreamlike architecture,",
 			"suffix": "limited palette, angular compositions, uncanny atmospheric tension"},
