@@ -46,7 +46,10 @@ STYLE_PRESETS = {
             "suffix": ""},    
         FAV + "Scribble Art": {
 			"prefix": "(Loose spontaneous linework, continuous overlapping strokes, chaotic energetic contours, sketchy hand-drawn texture, abstract or semi-representational forms, ",
-			"suffix": "dynamic movement, visible pressure variation, raw expressive mark-making with no clean outlines) "      },           
+			"suffix": "dynamic movement, visible pressure variation, raw expressive mark-making with no clean outlines) "      },      
+        FAV + "Bo-Golden":{
+            "prefix": "bo-golden, dark fantasy,  a highly detailed digital artwork featureing a dark gothic fantasy theme ", # hyperrealistic photograph / cgi render, 
+            "suffix": ""    },
 
     # ------------------------------------------------------------------------------------
         WIP+"Blanchitsu-Lite":{
@@ -74,14 +77,14 @@ STYLE_PRESETS = {
 		    "suffix": "intense monochrome depth, crushed shadows, bright metallic highlights, chemical streaks, plate imperfections, plate streaking, historical analog texture, vintage chemical imperfections"},
 		WIP+"Photo-oil": {
 		    "prefix": "",
-		    "suffix": "The photograph is rendered as oil painting on canvas with heavy brush strokes and deep rich colors, 50mm lens, cinematic style reminiscent of Tim Burton's dark fantasy aesthetic. High-resolution detailing captures the gritty texture of the metal machinery and the intricacies in fabric textures while maintaining a dreamlike quality to evoke nostalgia for days long past."},
+		    "suffix": "The photograph is rendered as oil painting on canvas with heavy brush strokes and deep rich colors, cinematic style reminiscent of Tim Burton's dark fantasy aesthetic. High-resolution detailing captures the gritty textures and intricacies in textures while maintaining a dreamlike quality to evoke a sense of fantasy and intrigue."},
 		WIP+"Hasselblad X2D": {
-		    "prefix": "Masterpiece photograph using a Hasselblad X2D II 100C, depth of field, subsurface scattering, and perfect, cinematic, volumetric lighting.",
+		    "prefix": "Masterpiece photograph using a medium-format camera, depth of field, subsurface scattering, and perfect, cinematic, volumetric lighting.",
 		    "suffix": "Rich detail, textured fabrics, expressive faces, warm natural lighting, cinematic realism, subtle depth of field, high-resolution digital art"},
-        WIP + "Cel shaded":{ 
+        WIP + "Red Rims":{ 
             "prefix": "A stylized digital illustration in comic line art style, rendered with professional, sleek, modern precision through vector graphics and graphic novel aesthetics. Employ a minimalist palette dominated by deep, enveloping shadows and negative space to evoke enigmatic stillness and cinematic tension, contrasted by saturated, vibrant highlights",
             "suffix": "faint red edge-lighting grazing contours, intense glowing accents piercing the darkness, and subtle glints of reflection along sharp, clean thick lines. Build quiet suspense with highly detailed yet restrained compositions, emphasizing stark contrasts between obscurity and luminous presence for a vibrant, graphic, and immersive visual impact."},
-        WIP+"Ansel Adams Portrait": {
+        WIP+"B&W classic portrait": { # Merge is some stuff from Illford Delta 3200??
             "prefix": "high-contrast black and white fine-art portrait photography, deep rich tonal range, precise zone-system exposure, crisp micro-detail, soft diffused key lighting, classic medium-format look, sculpted highlights and deep shadows, clean minimalist backdrop,",
             "suffix": "timeless fine-art realism, carefully controlled light and form, natural expression, strong textural definition, dramatic chiaroscuro, pure monochrome aesthetic, refined tonal control, gallery-quality portraiture"        },            
 
