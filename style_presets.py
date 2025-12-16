@@ -50,8 +50,33 @@ STYLE_PRESETS = {
         FAV + "Bo-Golden":{
             "prefix": "bo-golden, dark fantasy,  a highly detailed digital artwork featureing a dark gothic fantasy theme ", # hyperrealistic photograph / cgi render, 
             "suffix": ""    },
+		FAV+"Chiaroscuro Fantasy Sketch": {
+		    "prefix": "Chiaroscuro Fantasy Sketch, extreme photorealistic style,  Rendered in bold, expressive pop-art style with halftone textures,",
+		    "suffix": "low contrast, masterpiece, best quality, absurdres, highres, perfect anatomy, 8k wallpaper, ultra high quality, extremely detailed cg, perfect lighting, (sharp image) illustration),"},
+		FAV+"Photo-oil": {
+		    "prefix": "",
+		    "suffix": "The photograph is rendered as oil painting on canvas with heavy brush strokes and deep rich colors, cinematic style reminiscent of Tim Burton's dark fantasy aesthetic. High-resolution detailing captures the gritty textures and intricacies in textures while maintaining a dreamlike quality to evoke a sense of fantasy and intrigue."},
 
     # ------------------------------------------------------------------------------------
+		WIP+"SexyVintagePinup": {
+			"prefix": "classic 1950s sexy pin-up illustration, retro glamour lighting, soft film grain, voluptuous curves, playful seductive pose, vintage color palette",
+			"suffix": "sensual retro aesthetic, glossy magazine pin-up finish, painterly highlights, warm tones, elegant femininity, high detail"},
+		WIP+"BurlesquePinup": {
+			"prefix": "burlesque stage glamour, corsets and stockings, sultry theatrical lighting, vintage cabaret allure, exaggerated curves, sensual showgirl posing",
+			"suffix": "glittering highlights, velvet textures, retro cabaret aesthetic, flirtatious drama, rich reds and golds, high detail"},
+		WIP+"DarkNoirPinup": {
+			"prefix": "sexy noir pin-up style, smoky shadows, moody low-key lighting, femme fatale pose, glossy red lips, dark film noir atmosphere",
+			"suffix": "high contrast chiaroscuro, grainy noir texture, dramatic silhouettes, seductive tension, monochrome or muted palette, glossy finish"},
+		WIP+"CheesecakePinup": {
+			"prefix": "classic cheesecake pin-up art, playful innocent-sexy expression, bright soft lighting, pastel retro colors, exaggerated feminine curves",
+			"suffix": "cute flirty tone, magazine-style polish, clean painterly finish, lighthearted glamour, smooth retro shading"},
+		WIP+"ModernPinupFusion": {
+			"prefix": "modern reinterpretation of vintage pin-up, contemporary glamour lighting, high-fashion sensual pose, bold colors, sleek modern styling blended with retro curves",
+			"suffix": "ultra-polished beauty aesthetic, glossy highlights, high-resolution modern detailing, fusion-retro charm, vibrant and seductive"},
+		WIP+"ExplicitNSFWPinup": {
+			"prefix": "explicit erotic pin-up style, voluptuous curves in seductive NSFW posing, soft warm lighting, lustful expression, sultry vintage glamour with modern explicit edge",
+			"suffix": "high-detail erotic finish, glossy sensual highlights, bold intimate framing, luxurious skin texture, intense sexual energy"},
+
         WIP+"Blanchitsu-Lite":{
  			"prefix": "digital illustration, red yellow rust palette, apocalyptic chaos aesthetic, scorched orange skies, baroque gothic ornamentation, sketchy chaotic brushwork, dirty parchment tones mixed with blood-red and rust,  skulls ornamentation,insanity and zealotry, fever-dream battlefield energy, painterly grit and entropy,",
 			"suffix": "grimdark illustration, religious iconography ornamentation, chaotic composition, textured traditional media feel, ink-smudged edges, heavy contrast, stained parchment ambiance, raw painterly strokes, brutal gothic fantasy mood"},       
@@ -66,24 +91,12 @@ STYLE_PRESETS = {
 		WIP+"Flash Photo": {
 		    "prefix": "visible skin texture and micro-details, pronounced pore detail, minimal light diffusion, compact camera flash aesthetic, late 2000s to early 2010s digital photo style, ",
 		    "suffix": "cool-to-neutral white balance, moderate digital noise in shadow areas, flat background separation, no cinematic grading, raw unfiltered realism, documentary snapshot look, true-to-life color but with flash-driven saturation, unsoftened texture."},
-		WIP+"Polaroid": {
-		    "prefix": "polaroid photo, light-leaking Polaroid filter,",
-		    "suffix": "Kodak Portra 400 look, subtle grain, vignette, warm-cool contrast, intimate cinematic portrait"},
-		WIP+"Chiaroscuro Fantasy Sketch": {
-		    "prefix": "Chiaroscuro Fantasy Sketch, extreme photorealistic style,  Rendered in bold, expressive pop-art style with halftone textures,",
-		    "suffix": "low contrast, masterpiece, best quality, absurdres, highres, perfect anatomy, 8k wallpaper, ultra high quality, extremely detailed cg, perfect lighting, (sharp image) illustration),"},
-		WIP+"wet plate collodion portrait": {
-		    "prefix": "wet plate collodion portrait, ultra-deep blacks, extreme high contrast, large-format tintype look, razor micro-detail, dramatic silver-gelatin tones, harsh falloff, soft halation, organic chemical artifacts, oxidized plate edges",
-		    "suffix": "intense monochrome depth, crushed shadows, bright metallic highlights, chemical streaks, plate imperfections, plate streaking, historical analog texture, vintage chemical imperfections"},
-		WIP+"Photo-oil": {
-		    "prefix": "",
-		    "suffix": "The photograph is rendered as oil painting on canvas with heavy brush strokes and deep rich colors, cinematic style reminiscent of Tim Burton's dark fantasy aesthetic. High-resolution detailing captures the gritty textures and intricacies in textures while maintaining a dreamlike quality to evoke a sense of fantasy and intrigue."},
-		WIP+"Hasselblad X2D": {
-		    "prefix": "Masterpiece photograph using a medium-format camera, depth of field, subsurface scattering, and perfect, cinematic, volumetric lighting.",
-		    "suffix": "Rich detail, textured fabrics, expressive faces, warm natural lighting, cinematic realism, subtle depth of field, high-resolution digital art"},
-        WIP + "Red Rims":{ 
-            "prefix": "A stylized digital illustration in comic line art style, rendered with professional, sleek, modern precision through vector graphics and graphic novel aesthetics. Employ a minimalist palette dominated by deep, enveloping shadows and negative space to evoke enigmatic stillness and cinematic tension, contrasted by saturated, vibrant highlights",
-            "suffix": "faint red edge-lighting grazing contours, intense glowing accents piercing the darkness, and subtle glints of reflection along sharp, clean thick lines. Build quiet suspense with highly detailed yet restrained compositions, emphasizing stark contrasts between obscurity and luminous presence for a vibrant, graphic, and immersive visual impact."},
+		#WIP+"Polaroid": {
+		#    "prefix": "polaroid photo, light-leaking Polaroid filter,",
+		#    "suffix": "Kodak Portra 400 look, subtle grain, vignette, warm-cool contrast, intimate cinematic portrait"},
+		#WIP+"Hasselblad X2D": {
+		#    "prefix": "Masterpiece photograph using a medium-format camera, depth of field, subsurface scattering, and perfect, cinematic, volumetric lighting.",
+		#    "suffix": "Rich detail, textured fabrics, expressive faces, warm natural lighting, cinematic realism, subtle depth of field, high-resolution digital art"},
         WIP+"B&W classic portrait": { # Merge is some stuff from Illford Delta 3200??
             "prefix": "high-contrast black and white fine-art portrait photography, deep rich tonal range, precise zone-system exposure, crisp micro-detail, soft diffused key lighting, classic medium-format look, sculpted highlights and deep shadows, clean minimalist backdrop,",
             "suffix": "timeless fine-art realism, carefully controlled light and form, natural expression, strong textural definition, dramatic chiaroscuro, pure monochrome aesthetic, refined tonal control, gallery-quality portraiture"        },            
@@ -117,6 +130,9 @@ STYLE_PRESETS = {
         "prefix": "# File Details\n * filename: DSC1000.JPG\n * source:  old Android phone\n\n# Photograph Details\n * Color  : vibrant\n * Style  : casual and amateur\n * Content: \n", "suffix": "\n"},
       PHOTO + "Lo-fi Mobile Photo": { # from https://civitai.com/models/2181458/amazing-z-image-workflow
         "prefix": "A raw documentary photograph taken with an old Android phone. This casual, low quality, amateur shot showcases ", "suffix": ""},
+		PHOTO+"wet plate collodion portrait": {
+		    "prefix": "wet plate collodion portrait, ultra-deep blacks, extreme high contrast, large-format tintype look, razor micro-detail, dramatic silver-gelatin tones, harsh falloff, soft halation, organic chemical artifacts, oxidized plate edges",
+		    "suffix": "intense monochrome depth, crushed shadows, bright metallic highlights, chemical streaks, plate imperfections, plate streaking, historical analog texture, vintage chemical imperfections"},
 
 
 
@@ -166,6 +182,10 @@ STYLE_PRESETS = {
 		ANIME+"Retro-VHS-Anime": {
 			"prefix": "retro VHS anime aesthetic, soft analog blur, muted colors,",
 			"suffix": "chromatic bleeding, scanlines, tape noise artifacts"},	
+        ANIME + "Red Rims":{ 
+            "prefix": "A stylized digital illustration in comic line art style, rendered with professional, sleek, modern precision through vector graphics and graphic novel aesthetics. Employ a minimalist palette dominated by deep, enveloping shadows and negative space to evoke enigmatic stillness and cinematic tension, contrasted by saturated, vibrant highlights",
+            "suffix": "faint red edge-lighting grazing contours, intense glowing accents piercing the darkness, and subtle glints of reflection along sharp, clean thick lines. Build quiet suspense with highly detailed yet restrained compositions, emphasizing stark contrasts between obscurity and luminous presence for a vibrant, graphic, and immersive visual impact."},
+            
 
     # ------------------------------------------------------------------------------------
         ARTIST+"Blanchitsu-Like":{
