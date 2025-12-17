@@ -53,9 +53,13 @@ STYLE_PRESETS = {
 		FAV+"Chiaroscuro Fantasy Sketch": {
 		    "prefix": "Chiaroscuro Fantasy Sketch, extreme photorealistic style,  Rendered in bold, expressive pop-art style with halftone textures,",
 		    "suffix": "low contrast, masterpiece, best quality, absurdres, highres, perfect anatomy, 8k wallpaper, ultra high quality, extremely detailed cg, perfect lighting, (sharp image) illustration),"},
+		FAV+"Dark-Fantasy-Painterly": {
+			"prefix": "dark high-fantasy digital painting, brooding atmosphere, dramatic shadows,",
+			"suffix": "epic scale, mystical lighting, richly rendered environments"},
 		FAV+"Photo-oil": {
 		    "prefix": "",
 		    "suffix": "The photograph is rendered as oil painting on canvas with heavy brush strokes and deep rich colors, cinematic style reminiscent of Tim Burton's dark fantasy aesthetic. High-resolution detailing captures the gritty textures and intricacies in textures while maintaining a dreamlike quality to evoke a sense of fantasy and intrigue."},
+
 
     # ------------------------------------------------------------------------------------
 		WIP+"SexyVintagePinup": {
@@ -94,9 +98,9 @@ STYLE_PRESETS = {
 		#WIP+"Polaroid": {
 		#    "prefix": "polaroid photo, light-leaking Polaroid filter,",
 		#    "suffix": "Kodak Portra 400 look, subtle grain, vignette, warm-cool contrast, intimate cinematic portrait"},
-		#WIP+"Hasselblad X2D": {
-		#    "prefix": "Masterpiece photograph using a medium-format camera, depth of field, subsurface scattering, and perfect, cinematic, volumetric lighting.",
-		#    "suffix": "Rich detail, textured fabrics, expressive faces, warm natural lighting, cinematic realism, subtle depth of field, high-resolution digital art"},
+		WIP+"Hasselblad X2D": {
+		    "prefix": "Masterpiece artistic nude photograph using a Hasselblad X2D II 100C, depth of field, subsurface scattering, and perfect, cinematic, volumetric lighting.",
+		    "suffix": "Rich detail, dim lighting that casts deep shadows. subtle depth of field,"},
         WIP+"B&W classic portrait": { # Merge is some stuff from Illford Delta 3200??
             "prefix": "high-contrast black and white fine-art portrait photography, deep rich tonal range, precise zone-system exposure, crisp micro-detail, soft diffused key lighting, classic medium-format look, sculpted highlights and deep shadows, clean minimalist backdrop,",
             "suffix": "timeless fine-art realism, carefully controlled light and form, natural expression, strong textural definition, dramatic chiaroscuro, pure monochrome aesthetic, refined tonal control, gallery-quality portraiture"        },            
@@ -203,9 +207,6 @@ STYLE_PRESETS = {
 		ARTIST+"Syd Mead-Like": {
 			"prefix": "sleek retro-futurist industrial design illustration, clean functional geometry,",
 			"suffix": "polished surfaces, advanced tech motifs, cinematic sci-fi scale"},
-		ARTIST+"Dark-Fantasy-Painterly": {
-			"prefix": "dark high-fantasy digital painting, brooding atmosphere, dramatic shadows,",
-			"suffix": "epic scale, mystical lighting, richly rendered environments"},
 		ARTIST+"Renaissance": {
 			"prefix": "renaissance classical painting style, balanced composition, naturalistic anatomy,",
 			"suffix": "soft sfumato shading, muted warm tones, detailed drapery"},

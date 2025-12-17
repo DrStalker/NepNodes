@@ -10,6 +10,7 @@ import math
 import re
 import sys
 import os
+from decimal import Decimal, ROUND_HALF_UP, getcontext
 
 #---------------------------------------------------------------------------------------------------------------------------------------------------#
 
@@ -444,6 +445,42 @@ class NepRegexReplace:
 #---------------------------------------------------------------------------------------------------------------------------------------------------
 
 
+class NepFloatRounderWithString:
+
+    """
+    A ComfyUI custom node that converts a float to a string with specified decimal places.
+    Uses Decimal for precision handling to avoid floating point rounding issues.
+    Also outputs the rounded float because that was useful one time in one workflow.
+    """
+
+    @classmethod
+    def INPUT_TYPES(cls):
+        return {
+            "required": {
+                "value": ("FLOAT", {"default": 0.0, "min": -1e10, "max": 1e10, "step": 0.05,"display": "number"}),
+                "precision": ("INT", {"default": 2, "min": 0, "max": 16}),
+            }
+        }
+
+    RETURN_TYPES = ("STRING","FLOAT")
+    RETURN_NAMES = ("result_string","result_float")
+    FUNCTION = "round_float"
+    CATEGORY = "NepNodes"
+
+    def round_float(self, value, precision):
+        # Convert float to Decimal using string to avoid FP precision issues
+        d = Decimal(str(value))
+        # Set precision high enough to safely round
+        getcontext().prec = max(28, precision + 5)
+        # Create quantization pattern, e.g. "0.01"
+        quant = Decimal("1").scaleb(-precision)
+        # Round using HALF_UP (human-expected rounding)
+        rounded = d.quantize(quant, rounding=ROUND_HALF_UP)
+        # Format with fixed decimal places
+        fmt = f"{{:.{precision}f}}"
+        return (fmt.format(rounded),float(rounded))
+
+
 #---------------------------------------------------------------------------------------------------------------------------------------------------
 
 
@@ -500,6 +537,7 @@ NODE_CLASS_MAPPINGS = {
     "NepPrintStringIfTrue": NepPrintStringIfTrue,
     "NepStripFileExtension": NepStripFileExtension,
     "NepRegexReplace": NepRegexReplace,
+    "NepFloatRounderWithString": NepFloatRounderWithString,
 }
 
 NODE_DISPLAY_NAME_MAPPINGS = {
@@ -516,4 +554,5 @@ NODE_DISPLAY_NAME_MAPPINGS = {
     "NepPrintStringIfTrue": "Print String If True (NEP)",
     "NepStripFileExtension": "Strip File Extension (NEP)",
     "NepRegexReplace": "Regex Replace (Nep)",
+    "NepFloatRounderWithString": "Float2String (Nep)",
 }
