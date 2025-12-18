@@ -62,6 +62,10 @@ STYLE_PRESETS = {
 
 
     # ------------------------------------------------------------------------------------
+		WIP+"Generic":{
+            #          masterpiece, best quality, ultra-HD, 8k raw photo, photorealistic, Ultra-high definition, exquisite detail, cinematic feel, incredibly realistic, top-tier image quality, masterful lighting and shadows, smooth skin, and superb texture.
+            "prefix": "masterpiece, best quality, ultra-HD, 8k raw photo, photorealistic, 超高清, 极致细节, 电影感, 真实感爆棚, 顶级画质, 光影大师, 细腻皮肤, 质感拉满, ",
+            "suffix": ""}, 
 		WIP+"SexyVintagePinup": {
 			"prefix": "classic 1950s sexy pin-up illustration, retro glamour lighting, soft film grain, voluptuous curves, playful seductive pose, vintage color palette",
 			"suffix": "sensual retro aesthetic, glossy magazine pin-up finish, painterly highlights, warm tones, elegant femininity, high detail"},
@@ -74,9 +78,6 @@ STYLE_PRESETS = {
 		WIP+"CheesecakePinup": {
 			"prefix": "classic cheesecake pin-up art, playful innocent-sexy expression, bright soft lighting, pastel retro colors, exaggerated feminine curves",
 			"suffix": "cute flirty tone, magazine-style polish, clean painterly finish, lighthearted glamour, smooth retro shading"},
-		WIP+"ModernPinupFusion": {
-			"prefix": "modern reinterpretation of vintage pin-up, contemporary glamour lighting, high-fashion sensual pose, bold colors, sleek modern styling blended with retro curves",
-			"suffix": "ultra-polished beauty aesthetic, glossy highlights, high-resolution modern detailing, fusion-retro charm, vibrant and seductive"},
 		WIP+"ExplicitNSFWPinup": {
 			"prefix": "explicit erotic pin-up style, voluptuous curves in seductive NSFW posing, soft warm lighting, lustful expression, sultry vintage glamour with modern explicit edge",
 			"suffix": "high-detail erotic finish, glossy sensual highlights, bold intimate framing, luxurious skin texture, intense sexual energy"},
