@@ -60,7 +60,7 @@ class NepWanResolutions:
 
 
 class NepRatioResolution:
-    ratio = ["1:1", "5:4", "4:3", "3:2", "16:10","16:9","2:1","US Letter", "A4", "Force 1080p", "Force 2k"]
+    ratio = ["1:1", "5:4", "4:3", "3:2", "16:10","16:9","2:1","5:2","3:1","US Letter", "A4", "Force 1080p", "Force 2k"]
     orientation = ["portrait", "landscape"]
     def __init__(self):
         pass
@@ -103,7 +103,6 @@ class NepRatioResolution:
             rationum = float(11/8.5)
         elif(ratio == "A4"): 
             rationum = float(297/210)
-
         total_pixels = megapixels * 1024 * 1024
         width = math.sqrt(total_pixels * rationum)
         height = width / rationum
