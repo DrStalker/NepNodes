@@ -95,8 +95,10 @@ class NepRatioResolution:
             rationum = float(16/10)
         elif(ratio == "2:1"): 
             rationum = float(2)
-        elif(ratio == "21:9"): 
-            rationum = float(21/9)
+        elif(ratio == "5:2"): 
+            rationum = float(2.5)
+        elif(ratio == "3:1"): 
+            rationum = float(3)
         elif(ratio == "US Letter"): 
             rationum = float(11/8.5)
         elif(ratio == "A4"): 

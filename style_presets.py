@@ -346,6 +346,11 @@ STYLE_PRESETS = {
         MISC+"Long Exposure": {
             "prefix": "long exposure photo of",
             "suffix": "Blurred motion, streaks of light, surreal, dreamy, ghosting effect, highly detailed"        },
+        MISC+"Miniature": {
+            "prefix": "Ultra-realistic macro photograph of a hand-painted fantasy miniature ",
+            "suffix": "The paintwork is competition-grade: ultra-smooth skin blends on a weathered face, extreme micro-texturing on fabric and leather, precise edge highlights,  Controlled studio lighting, shallow depth of field, pitch-dark neutral backdrop, razor-sharp focus on brushwork, surface texture, and pigment transitions, true showcase quality. "
+            # removed: realistic dust and soot weathering, 
+		}
 }
 
 
