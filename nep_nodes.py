@@ -483,7 +483,48 @@ class NepFloatRounderWithString:
 
 
 #---------------------------------------------------------------------------------------------------------------------------------------------------
+class NepPromptAssembler:
+    """
+    This is for a very specific use-case in my workflows.
+    """
+    @classmethod
+    def INPUT_TYPES(cls):
+        return {
+            "required": {
+                "prefix": ("STRING", {"default": ""}),
+                "prompt": ("STRING", {"default": ""}),
+                "suffix": ("STRING", {"default": ""}),
+                "atat_replace": ("STRING", {"default": ""}),
+                "negative": ("STRING", {"default": "blurry ugly bad"}),
+                "clip": ("CLIP", {"tooltip": "The CLIP model used for encoding the text."})
+            }
+        }
+    RETURN_TYPES = ("CONDITIONING","CONDITIONING","STRING","STRING",)
+    RETURN_NAMES = ("positive_cond","negative_cond","final_prompt","final_neg")
+    FUNCTION = "assemble_prompt"
+    CATEGORY = "NepNodes"
 
+    def assemble_prompt(self,prefix,prompt,suffix,atat_replace,negative,clip):
+        output=""
+        if prefix:
+            output += prefix
+        if "@@" in prompt:
+            output += prompt.replace("@@", atat_replace)
+        if "^^" in prompt:
+            output += prompt.replace("^^", atat_replace.upper())
+       
+        output += prompt
+        if suffix:
+            output += suffix
+        # steal some code from CLIPTextEncode
+        if clip is None:
+            raise RuntimeError("ERROR: clip input is invalid: None\n")
+        tokensP = clip.tokenize(output)
+        clipP=clip.encode_from_tokens_scheduled(tokensP)
+        tokensN = clip.tokenize(output)
+        clipN=clip.encode_from_tokens_scheduled(tokensN)        
+
+        return (clipP,clipN, output, negative)
 
 #---------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -539,6 +580,7 @@ NODE_CLASS_MAPPINGS = {
     "NepStripFileExtension": NepStripFileExtension,
     "NepRegexReplace": NepRegexReplace,
     "NepFloatRounderWithString": NepFloatRounderWithString,
+    "NepPromptAssembler": NepPromptAssembler,
 }
 
 NODE_DISPLAY_NAME_MAPPINGS = {
@@ -556,4 +598,5 @@ NODE_DISPLAY_NAME_MAPPINGS = {
     "NepStripFileExtension": "Strip File Extension (NEP)",
     "NepRegexReplace": "Regex Replace (Nep)",
     "NepFloatRounderWithString": "Float2String (Nep)",
+    "NepPromptAssembler": "Prompt Assembler (Nep)",
 }
