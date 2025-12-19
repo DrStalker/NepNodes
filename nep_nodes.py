@@ -492,8 +492,8 @@ class NepPromptAssembler:
         return {
             "required": {
                 "prefix": ("STRING", {"default": ""}),
-                "prompt": ("STRING", {"default": ""}),
                 "suffix": ("STRING", {"default": ""}),
+                "prompt": ("STRING", {"default": ""}),                
                 "atat_replace": ("STRING", {"default": ""}),
                 "negative": ("STRING", {"default": "blurry ugly bad"}),
                 "clip": ("CLIP", {"tooltip": "The CLIP model used for encoding the text."})
